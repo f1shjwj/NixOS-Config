@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "flatpaks": {
+      "locked": {
+        "lastModified": 1739444422,
+        "narHash": "sha256-iAVVHi7X3kWORftY+LVbRiStRnQEob2TULWyjMS6dWg=",
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "rev": "5e54c3ca05a7c7d968ae1ddeabe01d2a9bc1e177",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gmodena",
+        "ref": "v0.6.0",
+        "repo": "nix-flatpak",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1739757849,
+        "narHash": "sha256-Gs076ot1YuAAsYVcyidLKUMIc4ooOaRGO0PqTY7sBzA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "9d3d080aec2a35e05a15cedd281c2384767c2cfe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-24.11",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1741862977,
+        "narHash": "sha256-prZ0M8vE/ghRGGZcflvxCu40ObKaB+ikn74/xQoNrGQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cdd2ef009676ac92b715ff26630164bb88fec4e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flatpaks": "flatpaks",
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
