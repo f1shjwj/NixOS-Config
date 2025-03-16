@@ -7,8 +7,8 @@
   home.homeDirectory = "/home/cmdjwj";
 
   xresources.properties = {
-    "Xcursor.size" = 12;
-    "Xft.dpi" = 144;
+    "Xcursor.size" = 16;
+    "Xft.dpi" = 192;
   };
 
   programs.home-manager.enable = true;

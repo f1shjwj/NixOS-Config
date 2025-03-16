@@ -12,11 +12,6 @@
     };
     fish = {
       enable = true;
-      loginShellInit = ''
-        if test -z "$DISPLAY" && test (tty) = "/dev/tty1"
-          exec ${pkgs.hyprland}/bin/Hyprland
-        end
-      '';
     };
     alacritty = {
       enable = true;

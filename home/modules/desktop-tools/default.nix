@@ -19,6 +19,18 @@
     # gnome.zenity # 图形弹窗
   ];
 
+  # programs = {
+  #   waybar = {
+  #     enable = true;
+  #     settings = builtins.readFile ./config.jsonc;
+  #     style = ./style.css;
+  #     systemd = {
+  #       enable = true;
+  #       target = "hyprland-session.target";
+  #     };
+  #   };
+  # };
+
   # services.kanshi = {
   #   enable = true;
   #   # systemdTarget = "xdg-desktop-portal-hyprland.target"; # ?

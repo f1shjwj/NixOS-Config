@@ -5,6 +5,8 @@
     ./hardware-configuration.nix
     ./networking.nix
     ./users.nix
+    ./fonts.nix
+    ./fcitx5.nix
     ./config.nix
   ];
 
@@ -21,6 +23,8 @@
 
   environment.variables.EDITOR = "vim";
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     vim
     git
@@ -31,13 +35,6 @@
     zip
     unzip
   ];
-
-  # TTY
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
 
   # 复制 NixOS 配置文件并将其链接到生成的系统中(/run/current-system/configuration.nix)。
   # 这在你不小心删除 configuration.nix 时非常有用。
