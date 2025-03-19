@@ -73,6 +73,7 @@
 
   home.packages = with pkgs; [
     hyprshot
+    hyprcursor
     hyprpolkitagent
   ];
 

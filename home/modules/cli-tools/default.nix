@@ -4,6 +4,7 @@
     neovim # TODO
     nixfmt-rfc-style
     ueberzugpp
+    lazydocker
   ];
 
   programs = {
@@ -11,6 +12,10 @@
       enable = true;
       userName = "cmdjwj";
       userEmail = "jwjawa@outlook.com";
+    };
+    lazygit = {
+      enable = true;
+      # settings
     };
     yazi = {
       enable = true;
@@ -21,7 +26,7 @@
     };
     fastfetch = {
       enable = true;
-      # settings =
+      # settings
     };
   };
 }
