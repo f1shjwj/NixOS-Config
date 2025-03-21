@@ -3,18 +3,16 @@
   home.packages = with pkgs; [
     udiskie
     mako
+    # SwayNotificationCenter
     waybar
     wlogout
     networkmanagerapplet
     wofi
-    # SwayNotificationCenter
     xdg-user-dirs
-    copyq
     wl-clipboard
     cliphist
     blueman
     ddcutil
-    # clipman  # 剪贴板历史管理
     # slurp    # 区域选择器
     # gnome.zenity # 图形弹窗
   ];

@@ -9,8 +9,13 @@
     obsidian
     libreoffice
     techmino
-    steam
   ];
+
+  programs = {
+    obs-studio = {
+      enable = true;
+    };
+  };
 
   # programs.vscode = {
   #   enable = true;

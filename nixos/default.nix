@@ -1,14 +1,8 @@
 { pkgs, ... }:
 {
   imports = [
-    ./boot-loader.nix
-    ./hardware-configuration.nix
-    ./networking.nix
-    ./users.nix
-    ./fonts.nix
-    ./fcitx5.nix
-    ./virtual.nix
-    ./config.nix
+    ./core
+    ./modules
   ];
 
   nix.settings = {

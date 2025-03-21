@@ -1,2 +1,2 @@
 .config
-nixos/password/*
+.password

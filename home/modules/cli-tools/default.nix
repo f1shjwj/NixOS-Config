@@ -5,6 +5,7 @@
     nixfmt-rfc-style
     ueberzugpp
     lazydocker
+    openssl
   ];
 
   programs = {
