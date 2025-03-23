@@ -14,4 +14,6 @@
       support32Bit.enable = true;
     };
   };
+  programs.gamescope.enable = true;
+  programs.steam.gamescopeSession.enable = true;
 }

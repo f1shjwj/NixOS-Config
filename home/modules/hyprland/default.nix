@@ -10,8 +10,8 @@
       enable = true;
       settings = {
         general = {
-          lock_cmd = "pidof hyprlock || hyprlock"; # 避免启动多个 hyprlock 实例
-          # on_lock_cmd = "loginctl lock-session"; # 锁定会话
+          lock_cmd = "pidof hyprlock || hyprlock";
+          # on_lock_cmd = "loginctl lock-session";
         };
         listener = [
           {

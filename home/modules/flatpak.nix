@@ -1,11 +1,5 @@
 { lib, pkgs, ... }:
 {
-  # xdg.portal = {
-  #   enable = true;
-  #   config.common.default = [ "gtk" ];
-  #   extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
-  # };
-
   services.flatpak = {
     enable = true;
     update.auto.enable = false;
