@@ -13,7 +13,7 @@
     direnv.enable = true;
     git = {
       enable = true;
-      userName = "cmdjwj";
+      userName = "F1shjwj";
       userEmail = "jwjawa@outlook.com";
     };
     lazygit = {

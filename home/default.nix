@@ -4,8 +4,8 @@
     ./modules
   ];
 
-  home.username = "cmdjwj";
-  home.homeDirectory = "/home/cmdjwj";
+  home.username = "f1shjwj";
+  home.homeDirectory = "/home/f1shjwj";
 
   xresources.properties = {
     "Xcursor.size" = 24;

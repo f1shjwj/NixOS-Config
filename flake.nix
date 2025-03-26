@@ -1,5 +1,5 @@
 {
-  description = "cmdjwj's NixOS Config";
+  description = "F1shjwj's NixOS Config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
@@ -32,7 +32,7 @@
               extraSpecialArgs = inputs;
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.cmdjwj.imports = [
+              users.f1shjwj.imports = [
                 ./home
                 flatpaks.homeManagerModules.nix-flatpak
               ];

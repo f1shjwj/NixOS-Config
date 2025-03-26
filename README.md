@@ -1,4 +1,4 @@
-# cmdjwj's NixOS Config
+# F1shjwj's NixOS Config
 
 建议先正常安装NixOS后再使用配置。
 

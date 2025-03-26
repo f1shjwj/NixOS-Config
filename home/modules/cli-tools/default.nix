@@ -7,6 +7,7 @@
     nix-tree
     you-get
     shell-gpt # TODO: config
+    fzf
   ];
 
   programs = {

@@ -1,9 +1,9 @@
 {
   users = {
-    groups.cmdjwj.gid = 1000;
-    users.cmdjwj = {
+    groups.f1shjwj.gid = 1000;
+    users.f1shjwj = {
       isNormalUser = true;
-      group = "cmdjwj";
+      group = "f1shjwj";
       extraGroups = [
         "users"
         "wheel"
@@ -11,7 +11,7 @@
         "i2c"
       ];
       shell = "/run/current-system/sw/bin/bash";
-      hashedPasswordFile = "/etc/nixos/.password/cmdjwj";
+      hashedPasswordFile = "/etc/nixos/.password/f1shjwj";
     };
     users.root = {
       hashedPasswordFile = "/etc/nixos/.password/root";
