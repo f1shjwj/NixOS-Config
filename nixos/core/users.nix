@@ -7,6 +7,7 @@
       extraGroups = [
         "users"
         "wheel"
+        "input"
         "i2c"
       ];
       shell = "/run/current-system/sw/bin/bash";

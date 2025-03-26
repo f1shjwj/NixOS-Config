@@ -11,6 +11,8 @@
     okular
     keepassxc
     follow
+    hmcl
+    mindustry
   ];
 
   programs = {

@@ -11,11 +11,14 @@
     xdg-user-dirs
     wl-clipboard
     cliphist
-    blueman
+    pavucontrol
     ddcutil
     # slurp    # 区域选择器
     # gnome.zenity # 图形弹窗
   ];
+
+  services.blueman-applet.enable = true;
+  services.mpris-proxy.enable = true;
 
   services.kanshi = {
     enable = true;

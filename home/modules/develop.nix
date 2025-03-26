@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     vscode
+    gnumake
     lazydocker
     nixfmt-rfc-style
     nixd

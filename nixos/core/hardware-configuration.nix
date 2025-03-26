@@ -17,7 +17,6 @@
     extraModulePackages = [ ];
     kernelModules = [
       "kvm-amd"
-      "i2c-dev"
     ];
     initrd = {
       kernelModules = [ ];
@@ -28,10 +27,6 @@
       ];
     };
   };
-
-  services.udev.extraRules = ''
-    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
-  '';
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/6b1eb267-f3ca-4fab-bba0-21ab6490279c";
