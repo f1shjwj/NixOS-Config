@@ -25,7 +25,7 @@
       nixosConfigurations.jwj-nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./nixos
+          ./old/nixos
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -33,7 +33,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.f1shjwj.imports = [
-                ./home
+                ./old/home
                 flatpaks.homeManagerModules.nix-flatpak
               ];
             };
