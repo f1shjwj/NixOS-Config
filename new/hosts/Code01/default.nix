@@ -1,9 +1,49 @@
-{ pkgs, ... }:
 {
-  imports = [
-    ./core
-    ./modules
+  imports =
+    [ ./hardware-configuration.nix ]
+    ++ [
+      ../../modules/pipewire.nix
+      ../../modules/bluetooth.nix
+      ../../modules/i2c.nix
+    ];
+
+  nixpkgs.config.allowUnfree = true;
+
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+  };
+
+  i18n.defaultLocale = "zh_CN.UTF-8";
+  i18n.supportedLocales = [
+    "zh_CN.UTF-8/UTF-8"
+    "en_US.UTF-8/UTF-8"
   ];
+
+  environment.variables.EDITOR = "vim";
+
+  networking = {
+    hostName = "F1shjwj-Code01";
+    networkmanager.enable = true;
+    proxy = {
+      default = "http://127.0.0.1:7897"; # http://user:password@proxy:port/
+      noProxy = "127.0.0.1,localhost,internal.domain";
+    };
+  };
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
+
+  time.timeZone = "Asia/Shanghai";
 
   nix.settings = {
     substituters = [
@@ -19,30 +59,6 @@
     ];
     max-jobs = 2;
   };
-  networking.hostName = "jwj-nixos";
-  time.timeZone = "Asia/Shanghai";
-  i18n.defaultLocale = "zh_CN.UTF-8";
-  i18n.supportedLocales = [
-    "zh_CN.UTF-8/UTF-8"
-    "en_US.UTF-8/UTF-8"
-  ];
-
-  environment.variables.EDITOR = "vim";
-
-  nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    wget
-    curl
-    fd
-    tree
-    zip
-    unzip
-    zlib
-    killall
-  ];
 
   # 复制 NixOS 配置文件并将其链接到生成的系统中(/run/current-system/configuration.nix)。
   # 这在你不小心删除 configuration.nix 时非常有用。

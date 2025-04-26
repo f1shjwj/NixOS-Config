@@ -22,10 +22,10 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.jwj-nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.F1shjwj-Code01 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./old/nixos
+          ./new
           home-manager.nixosModules.home-manager
           {
             home-manager = {
