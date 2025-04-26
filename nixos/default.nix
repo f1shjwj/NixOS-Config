@@ -6,11 +6,18 @@
   ];
 
   nix.settings = {
-    substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+    substituters = [
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://nix-community.cachix.org"
+    ];
+    trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
     experimental-features = [
       "nix-command"
       "flakes"
     ];
+    max-jobs = 2;
   };
   networking.hostName = "jwj-nixos";
   time.timeZone = "Asia/Shanghai";
@@ -33,6 +40,8 @@
     tree
     zip
     unzip
+    zlib
+    killall
   ];
 
   # 复制 NixOS 配置文件并将其链接到生成的系统中(/run/current-system/configuration.nix)。

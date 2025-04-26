@@ -9,6 +9,7 @@
         "wheel"
         "input"
         "i2c"
+        "docker"
       ];
       shell = "/run/current-system/sw/bin/bash";
       hashedPasswordFile = "/etc/nixos/.password/f1shjwj";

@@ -13,9 +13,9 @@
 
   security.rtkit.enable = true;
 
-  programs = {
-    hyprland.enable = true;
-  };
+  # programs = {
+  #   hyprland.enable = true;
+  # };
 
   hardware.bluetooth.enable = true;
 }

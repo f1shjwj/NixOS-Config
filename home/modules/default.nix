@@ -2,7 +2,7 @@
   imports = [
     ./cli-tools
     ./desktop-tools
-    ./hyprland
+    # ./hyprland
     ./develop.nix
     ./flatpak.nix
     ./shell.nix

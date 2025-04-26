@@ -11,6 +11,7 @@
     okular
     keepassxc
     follow
+    qbittorrent
   ];
 
   programs = {
