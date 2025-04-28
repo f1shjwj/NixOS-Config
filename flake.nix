@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flatpaks.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
     # nur = {
     #   url = "github:nix-community/NUR";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -15,30 +15,23 @@
   };
 
   outputs =
+    { nixpkgs, ... }@inputs:
     {
-      nixpkgs,
-      home-manager,
-      flatpaks,
-      ...
-    }@inputs:
-    {
-      nixosConfigurations.F1shjwj-Code01 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./new
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = inputs;
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.f1shjwj.imports = [
-                ./old/home
-                flatpaks.homeManagerModules.nix-flatpak
-              ];
-            };
-          }
-        ];
+      nixosConfigurations = {
+        "F1shjwj-Code01" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+          };
+          modules =
+            [ ./plugin ]
+            ++ [
+              ./hosts/Code01
+              ./users/passwd.nix
+              ./users/f1shjwj
+              ./users/f1shjwj/clash.nix
+            ];
+        };
       };
     };
 }

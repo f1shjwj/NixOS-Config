@@ -15,6 +15,7 @@
       ];
     };
   };
+  users.extraGroups.docker.members = [ "f1shjwj" ];
 
   # https://nixos.wiki/wiki/WayDroid
   virtualisation.waydroid.enable = true;

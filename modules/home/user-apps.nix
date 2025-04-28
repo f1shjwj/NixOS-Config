@@ -8,10 +8,11 @@
     obsidian
     libreoffice
     techmino
-    okular
+    foliate
     keepassxc
     follow
     qbittorrent
+    lutris # TODO
   ];
 
   programs = {
