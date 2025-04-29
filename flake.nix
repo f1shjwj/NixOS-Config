@@ -20,16 +20,13 @@
       nixosConfigurations = {
         "F1shjwj-Code01" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
-          };
+          specialArgs = { inherit inputs; };
           modules =
             [ ./plugin ]
             ++ [
               ./hosts/Code01
-              ./users/passwd.nix
+              ./users/root
               ./users/f1shjwj
-              ./users/f1shjwj/clash.nix
             ];
         };
       };
