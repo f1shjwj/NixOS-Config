@@ -40,34 +40,30 @@
       lutris # TODO
     ];
 
-  programs = {
-    yazi = {
-      enable = true;
-    };
-    fastfetch = {
-      enable = true;
-      # settings
-    };
-    direnv.enable = true;
-    git = {
-      enable = true;
-      userName = "F1shjwj";
-      userEmail = "jwjawa@outlook.com";
-    };
-    lazygit = {
-      enable = true;
-      # settings
-    };
-    # zellij = {
-    #   enable = true;
-    #   enableFishIntegration = true;
-    # };
-    obs-studio = {
-      enable = true;
-    };
-    chromium = {
-      enable = true;
-      package = pkgs.vivaldi;
-    };
+  programs.yazi = {
+    enable = true;
+  };
+  programs.fastfetch = {
+    enable = true;
+  };
+  programs.direnv.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "F1shjwj";
+    userEmail = "jwjawa@outlook.com";
+  };
+  programs.lazygit = {
+    enable = true;
+  };
+  # programs.zellij = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
+  programs.obs-studio = {
+    enable = true;
+  };
+  programs.chromium = {
+    enable = true;
+    package = pkgs.vivaldi;
   };
 }

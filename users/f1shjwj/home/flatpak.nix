@@ -1,5 +1,7 @@
 { lib, ... }:
 {
+  # https://github.com/gmodena/nix-flatpak/
+
   services.flatpak = {
     enable = true;
     update.auto.enable = false;

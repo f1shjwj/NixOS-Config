@@ -8,6 +8,11 @@
     ./pointer-cursor.nix
   ];
 
+  xresources.properties = {
+    "Xcursor.size" = 24;
+    "Xft.dpi" = 192;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = builtins.readFile ./conf/hyprland.conf;

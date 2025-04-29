@@ -1,7 +1,5 @@
 {
   imports = [
-    ../../modules/base-packages.nix
-
     ../../modules/desktop/hyprland.nix
     ../../modules/desktop/gamescope.nix
 

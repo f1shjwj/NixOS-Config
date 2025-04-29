@@ -1,14 +1,165 @@
 {
-  # TODO
-  # programs = {
-  #   waybar = {
-  #     enable = true;
-  #     settings = builtins.readFile ./config.jsonc;
-  #     style = ./style.css;
-  #     systemd = {
-  #       enable = true;
-  #       target = "hyprland-session.target";
-  #     };
-  #   };
-  # };
+  programs.waybar = {
+    enable = true;
+    style = ./style.css;
+    systemd = {
+      enable = true;
+      target = "hyprland-session.target";
+    };
+  };
+
+  programs.waybar.settings.mainBar = {
+    height = 30;
+    spacing = 4;
+    modules-left = [
+      "hyprland/workspaces"
+      "wlr/taskbar"
+    ];
+    modules-center = [
+      "hyprland/window"
+    ];
+    modules-right = [
+      # "mpd"
+      # "idle_inhibitor"
+      # "cpu"
+      # "memory"
+      # "temperature"
+      "network"
+      "pulseaudio"
+      "backlight"
+      "battery"
+      "power-profiles-daemon"
+      "tray"
+      "clock"
+    ];
+    "hyprland/workspaces" = {
+      on-scroll-up = "hyprctl dispatch workspace r-1";
+      on-scroll-down = "hyprctl dispatch workspace r+1";
+      on-click = "activate";
+      active-only = false;
+      all-outputs = true;
+      format = "{}";
+      format-icons = {
+        urgent = "";
+        active = "";
+        default = "";
+      };
+    };
+    "wlr/taskbar" = {
+      format = "{icon}";
+      icon-size = 18;
+      tooltip-format = "{title}";
+      on-click = "activate";
+      on-click-middle = "close";
+      ignore-list = [
+        "Alacritty"
+        "kitty"
+      ];
+      app_ids-mapping = {
+        firefoxdeveloperedition = "firefox-developer-edition";
+      };
+      rewrite = {
+        "Firefox Web Browser" = "Firefox";
+        "Foot Server" = "Terminal";
+      };
+    };
+    "hyprland/window" = {
+      max-length = 60;
+      rewrite = {
+        "(.*) - Brave" = "$1";
+        "(.*) - Chromium" = "$1";
+        "(.*) - Brave Search" = "$1";
+        "(.*) - Outlook" = "$1";
+        "(.*) Microsoft Teams" = "$1";
+      };
+      separate-outputs = true;
+    };
+    tray = {
+      # icon-size = 21;
+      spacing = 10;
+    };
+    clock = {
+      # timezone = "America/New_York";
+      tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+      format-alt = "{:%Y-%m-%d}";
+    };
+    backlight = {
+      # device = "acpi_video1";
+      format = "{percent}% {icon}";
+      format-icons = [
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+      ];
+    };
+    battery = {
+      states = {
+        # good = 95;
+        warning = 50;
+        critical = 20;
+      };
+      format = "{capacity}% {icon}";
+      format-full = "{capacity}% {icon}";
+      format-charging = "{capacity}% ";
+      format-plugged = "{capacity}% ";
+      format-alt = "{time} {icon}";
+      # format-good = "";
+      format-icons = [
+        ""
+        ""
+        ""
+        ""
+        ""
+      ];
+    };
+    power-profiles-daemon = {
+      format = "{icon}";
+      tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+      tooltip = true;
+      format-icons = {
+        default = "";
+        performance = "";
+        balanced = "";
+        power-saver = "";
+      };
+    };
+    network = {
+      # interface = "wlp2*";
+      format-wifi = "{essid} ({signalStrength}%) ";
+      format-ethernet = "{ipaddr}/{cidr} ";
+      tooltip-format = "{ifname} via {gwaddr} ";
+      format-linked = "{ifname} (No IP) ";
+      format-disconnected = "Disconnected ⚠";
+      format-alt = "{ifname}: {ipaddr}/{cidr}";
+    };
+    pulseaudio = {
+      # scroll-step = 1;
+      format = "{volume}% {icon} {format_source}";
+      format-bluetooth = "{volume}% {icon} {format_source}";
+      format-bluetooth-muted = " {icon} {format_source}";
+      format-muted = " {format_source}";
+      format-source = "{volume}% ";
+      format-source-muted = "";
+      format-icons = {
+        headphone = "";
+        hands-free = "";
+        headset = "";
+        phone = "";
+        portable = "";
+        car = "";
+        default = [
+          ""
+          ""
+          ""
+        ];
+      };
+      on-click = "pavucontrol";
+    };
+  };
 }

@@ -17,14 +17,14 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
-        "idle_inhibitor",
+        // "mpd",
+        // "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        // "cpu",
+        // "memory",
+        // "temperature",
         "backlight",
         // "keyboard-state",
         // "hyprland/language",
@@ -34,33 +34,49 @@
         "clock"
         // "custom/power"
     ],
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
+    // Workspaces
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "urgent": "",
+            "active": "",
+            "default": ""
         }
     },
+    // Taskbar
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "Alacritty",
+            "kitty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+    },
+    // Hyprland Window
     "hyprland/window": {
+        "max-length": 60,
+        "rewrite": {
+            "(.*) - Brave": "$1",
+            "(.*) - Chromium": "$1",
+            "(.*) - Brave Search": "$1",
+            "(.*) - Outlook": "$1",
+            "(.*) Microsoft Teams": "$1"
+        },
         "separate-outputs": true
     },
     "hyprland/mode": {
@@ -155,8 +171,8 @@
     "battery": {
         "states": {
             // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 50,
+            "critical": 20
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",

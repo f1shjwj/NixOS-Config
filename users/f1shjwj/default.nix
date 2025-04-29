@@ -24,6 +24,7 @@
       inputs.nix-flatpak.homeManagerModules.nix-flatpak
       ./home
     ];
+
     home.username = "f1shjwj";
     home.homeDirectory = "/home/f1shjwj";
 
