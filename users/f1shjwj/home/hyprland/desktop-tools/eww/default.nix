@@ -1,6 +1,6 @@
 {
-  # programs.eww = {
-  #   enable = true;
-  #   configDir = ./eww-config-dir;
-  # };
+  programs.eww = {
+    enable = true;
+    configDir = ./eww-config-dir;
+  };
 }

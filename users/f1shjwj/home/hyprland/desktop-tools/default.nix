@@ -8,19 +8,23 @@
   ];
 
   home.packages = with pkgs; [
-    udiskie
-    mako
     wlogout
     networkmanagerapplet
-    wofi
+    rofi-wayland
     xdg-user-dirs
     wl-clipboard
     cliphist
     pavucontrol
     ddcutil
-    power-profiles-daemon
     xdg-desktop-portal-hyprland
   ];
+
+  services.swaync = {
+    enable = true;
+  };
+
+  services.udiskie.enable = true;
+  services.network-manager-applet.enable = true;
 
   services.mpris-proxy.enable = true;
 }

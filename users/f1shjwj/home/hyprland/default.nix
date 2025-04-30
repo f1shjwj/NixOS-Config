@@ -13,9 +13,21 @@
     "Xft.dpi" = 192;
   };
 
+  home.file.".config/hypr/configs/" = {
+    source = ./configs;
+    recursive = true;
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = builtins.readFile ./conf/hyprland.conf;
+    settings.source = [
+      "./configs/settings.conf"
+      "./configs/keybinds.conf"
+      "./configs/startup.conf"
+      "./configs/variables.conf"
+      "./configs/window_rules.conf"
+      "./configs/animations.conf"
+    ];
   };
 
   home.packages = with pkgs; [

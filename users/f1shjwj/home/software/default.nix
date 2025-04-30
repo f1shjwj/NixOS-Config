@@ -55,10 +55,6 @@
   programs.lazygit = {
     enable = true;
   };
-  # programs.zellij = {
-  #   enable = true;
-  #   enableFishIntegration = true;
-  # };
   programs.obs-studio = {
     enable = true;
   };

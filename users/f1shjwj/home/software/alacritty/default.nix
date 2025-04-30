@@ -92,12 +92,8 @@
         shape = "Beam";
       };
     };
-    # draw_bold_text_with_bright_colors = false;
     selection = {
-      # semantic_escape_chars: ',│`|:"'' ()[]{}<>'
       save_to_clipboard = true;
     };
-    # live_config_reload = true;
-    # key_bindings
   };
 }

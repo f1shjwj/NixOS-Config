@@ -31,6 +31,7 @@
       "power-profiles-daemon"
       "tray"
       "clock"
+      "custom/notification"
     ];
     "hyprland/workspaces" = {
       on-scroll-up = "hyprctl dispatch workspace r-1";
@@ -80,8 +81,8 @@
     };
     clock = {
       # timezone = "America/New_York";
+      format = "{:%Y-%m-%d <span weight='bold'>%H:%M</span>}";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "{:%Y-%m-%d}";
     };
     backlight = {
       # device = "acpi_video1";
@@ -160,6 +161,12 @@
         ];
       };
       on-click = "pavucontrol";
+    };
+    "custom/notification" = {
+      format = " ";
+      tooltip = false;
+      exec = "swaync-client -sw";
+      on-click = "swaync-client -t";
     };
   };
 }

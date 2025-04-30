@@ -2,19 +2,23 @@
 {
   fonts.fontDir.enable = true;
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    noto-fonts-emoji
-    source-sans
-    source-serif
-    source-han-sans
-    source-han-serif
-    (nerdfonts.override {
-      fonts = [
-        "Hack"
-      ];
-    })
-  ];
+  fonts.packages =
+    with pkgs;
+    [ (nerdfonts.override { fonts = [ "Hack" ]; }) ]
+    ++ [
+      source-sans
+      source-serif
+      source-han-sans
+      source-han-serif
+    ]
+    ++ [
+      corefonts
+      windows-fonts
+    ]
+    ++ [
+      font-awesome
+      noto-fonts-emoji
+    ];
 
   fonts.fontconfig.defaultFonts = {
     serif = [

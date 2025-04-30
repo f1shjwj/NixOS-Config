@@ -10,6 +10,7 @@
     ../../modules/greetd.nix
     ../../modules/fcitx5.nix
     ../../modules/fonts.nix
+    ../../modules/power-profiles-daemon.nix
     ../../modules/flatpak.nix
     ../../modules/steam.nix
 

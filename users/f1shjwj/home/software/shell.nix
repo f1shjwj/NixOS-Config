@@ -12,5 +12,8 @@
 
   programs.fish = {
     enable = true;
+    interactiveShellInit = ''
+      set -g fish_greeting "Welcome, F1shjwj! Time is $(date +%H:%M)"
+    '';
   };
 }
