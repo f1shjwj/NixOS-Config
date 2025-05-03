@@ -12,6 +12,8 @@
     "com.github.tchx84.Flatseal"
     "com.qq.QQ"
     "com.tencent.WeChat"
+    "com.tencent.wemeet"
+    "com.baidu.NetDisk"
   ];
 
   services.flatpak.remotes = lib.mkOptionDefault [

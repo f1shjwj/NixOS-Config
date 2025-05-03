@@ -3,7 +3,9 @@
   imports = [
     ./alacritty
     ./btop
+    ./flatpak.nix
     ./shell.nix
+    ./unstable.nix
   ];
 
   home.packages =
@@ -18,7 +20,7 @@
       fzf
     ]
     ++ [
-      vscode
+      # vscode
       gnumake
       lazydocker
       nixfmt-rfc-style
@@ -28,7 +30,7 @@
     ++ [
       firefox
       mpv
-      clash-verge-rev
+      feh
       telegram-desktop
       obsidian
       libreoffice
@@ -38,6 +40,7 @@
       follow
       qbittorrent
       lutris # TODO
+      xfce.mousepad
     ];
 
   programs.yazi = {
@@ -57,9 +60,5 @@
   };
   programs.obs-studio = {
     enable = true;
-  };
-  programs.chromium = {
-    enable = true;
-    package = pkgs.vivaldi;
   };
 }

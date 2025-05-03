@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,18 +13,52 @@
   };
 
   outputs =
-    { nixpkgs, ... }@inputs:
+    inputs@{
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      chinese-fonts-overlay,
+      ...
+    }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ chinese-fonts-overlay.overlays.default ];
+      };
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+        config.permittedInsecurePackages = [
+          "clash-verge-rev-2.2.3"
+          "clash-verge-rev-webui-2.2.3"
+          "clash-verge-rev-service-2.2.3"
+          "clash-verge-rev-unwrapped-2.2.3"
+        ];
+      };
+    in
     {
       nixosConfigurations = {
         "F1shjwj-Code01" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          inherit pkgs;
+          specialArgs = { inherit inputs pkgs-unstable; };
           modules =
-            [ ./plugin ]
-            ++ [
+            [
               ./hosts/Code01
               ./users/root
               ./users/f1shjwj
+            ]
+            ++ [
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  extraSpecialArgs = { inherit inputs pkgs-unstable; };
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  backupFileExtension = "backup";
+                };
+              }
             ];
         };
       };
