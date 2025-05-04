@@ -1,6 +1,7 @@
-{ lib, ... }:
+{ lib, inputs, ... }:
 {
   # https://github.com/gmodena/nix-flatpak/
+  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
 
   services.flatpak = {
     enable = true;

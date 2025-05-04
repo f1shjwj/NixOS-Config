@@ -1,4 +1,3 @@
-{ inputs, ... }:
 {
   imports = [ ./modules.nix ];
 
@@ -20,10 +19,7 @@
   };
 
   home-manager.users.f1shjwj = {
-    imports = [
-      inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      ./home
-    ];
+    imports = [ ./home ];
 
     home.username = "f1shjwj";
     home.homeDirectory = "/home/f1shjwj";
