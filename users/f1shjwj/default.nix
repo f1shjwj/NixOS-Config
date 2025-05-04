@@ -1,10 +1,13 @@
+let
+  username = "f1shjwj";
+in
 {
   imports = [ ./old-modules ];
 
-  users.groups.f1shjwj.gid = 1000;
-  users.users.f1shjwj = {
+  users.groups.${username}.gid = 1000;
+  users.users.${username} = {
     isNormalUser = true;
-    group = "f1shjwj";
+    group = "${username}";
     extraGroups = [
       "users"
       "wheel"
@@ -15,14 +18,14 @@
       "vboxusers"
     ];
     shell = "/run/current-system/sw/bin/bash";
-    hashedPasswordFile = "/etc/nixos/.passwd/f1shjwj";
+    hashedPasswordFile = "/etc/nixos/.passwd/${username}";
   };
 
-  home-manager.users.f1shjwj = {
-    imports = [ ./home ];
+  home-manager.users.${username} = {
+    imports = [ ./old-home ];
 
-    home.username = "f1shjwj";
-    home.homeDirectory = "/home/f1shjwj";
+    home.username = "${username}";
+    home.homeDirectory = "/home/${username}";
 
     programs.home-manager.enable = true;
     home.stateVersion = "24.11";
