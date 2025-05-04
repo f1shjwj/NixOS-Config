@@ -2,9 +2,8 @@ let
   username = "f1shjwj";
 in
 {
-  imports = [ ./modules ];
-
   _module.args = { inherit username; };
+  imports = [ ./modules ];
 
   users.groups.${username}.gid = 1000;
   users.users.${username} = {
@@ -14,18 +13,16 @@ in
       "users"
       "wheel"
       "input"
-
-      "i2c"
     ];
     shell = "/run/current-system/sw/bin/bash";
     hashedPasswordFile = "/etc/nixos/.passwd/${username}";
   };
 
   home-manager.users.${username} = {
-    imports = [ ./old-home/hyprland ];
-
     home.username = "${username}";
     home.homeDirectory = "/home/${username}";
+
+    home.sessionVariables.NIXOS_OZONE_WL = "1";
 
     programs.home-manager.enable = true;
     home.stateVersion = "24.11";
