@@ -1,7 +1,7 @@
 { pkgs-unstable, ... }:
 {
   home.packages = with pkgs-unstable; [
-    vscode
+    # vscode
     gimp3
     clash-verge-rev
   ];

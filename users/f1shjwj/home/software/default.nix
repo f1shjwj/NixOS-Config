@@ -20,7 +20,7 @@
       fzf
     ]
     ++ [
-      # vscode
+      vscode
       gnumake
       lazydocker
       nixfmt-rfc-style
