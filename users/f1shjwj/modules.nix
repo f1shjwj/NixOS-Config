@@ -1,6 +1,7 @@
 {
   imports = [
     ../../modules/desktop/hyprland.nix
+    ../../modules/desktop/niri.nix
     ../../modules/desktop/gamescope.nix
 
     ../../modules/virtual/docker.nix
