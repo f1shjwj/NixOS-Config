@@ -37,6 +37,17 @@
           "clash-verge-rev-unwrapped-2.2.3"
         ];
       };
+      home-manager-module = [
+        home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            extraSpecialArgs = { inherit inputs; };
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "backup";
+          };
+        }
+      ];
     in
     {
       nixosConfigurations = {
@@ -44,21 +55,11 @@
           inherit pkgs;
           specialArgs = { inherit inputs pkgs-unstable; };
           modules =
-            [
-              ./hosts/Code01
+            home-manager-module
+            ++ [ ./hosts/Code01 ]
+            ++ [
               ./users/root
               ./users/f1shjwj
-            ]
-            ++ [
-              home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  extraSpecialArgs = { inherit inputs pkgs-unstable; };
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  backupFileExtension = "backup";
-                };
-              }
             ];
         };
       };
