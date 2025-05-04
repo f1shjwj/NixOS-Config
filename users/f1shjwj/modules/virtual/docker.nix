@@ -1,4 +1,7 @@
+{ username, ... }:
 {
+  users.groups.docker.members = [ username ];
+
   virtualisation.docker = {
     enable = true;
     storageDriver = "btrfs";

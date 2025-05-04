@@ -5,15 +5,16 @@
     ./desktop/gamescope.nix
 
     ./virtual/docker.nix
-    # ./virtual/waydroid.nix
     ./virtual/virtualbox.nix
+    # ./virtual/waydroid.nix
+
+    ./software/power-profiles-daemon.nix
+    ./software/flatpak.nix
+    ./software/steam.nix
+    ./software/thunar.nix
 
     ./greetd.nix
     ./fcitx5.nix
     ./fonts.nix
-    ./power-profiles-daemon.nix
-    ./flatpak.nix
-    ./steam.nix
-    ./thunar.nix
   ];
 }

@@ -2,7 +2,9 @@ let
   username = "f1shjwj";
 in
 {
-  imports = [ ./old-modules ];
+  imports = [ ./modules ];
+
+  _module.args = { inherit username; };
 
   users.groups.${username}.gid = 1000;
   users.users.${username} = {
@@ -14,8 +16,6 @@ in
       "input"
 
       "i2c"
-      "docker"
-      "vboxusers"
     ];
     shell = "/run/current-system/sw/bin/bash";
     hashedPasswordFile = "/etc/nixos/.passwd/${username}";
