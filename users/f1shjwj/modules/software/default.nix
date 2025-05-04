@@ -1,14 +1,6 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 {
-  imports = [
-    ./alacritty
-    ./btop
-    ./flatpak.nix
-    ./shell.nix
-    ./unstable.nix
-  ];
-
-  home.packages =
+  users.users.${username}.packages =
     with pkgs;
     [
       neovim # TODO
@@ -43,22 +35,24 @@
       xfce.mousepad
     ];
 
-  programs.yazi = {
-    enable = true;
-  };
-  programs.fastfetch = {
-    enable = true;
-  };
-  programs.direnv.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "F1shjwj";
-    userEmail = "jwjawa@outlook.com";
-  };
-  programs.lazygit = {
-    enable = true;
-  };
-  programs.obs-studio = {
-    enable = true;
+  home-manager.users.${username}.programs = {
+    yazi = {
+      enable = true;
+    };
+    fastfetch = {
+      enable = true;
+    };
+    direnv.enable = true;
+    git = {
+      enable = true;
+      userName = "F1shjwj";
+      userEmail = "jwjawa@outlook.com";
+    };
+    lazygit = {
+      enable = true;
+    };
+    obs-studio = {
+      enable = true;
+    };
   };
 }

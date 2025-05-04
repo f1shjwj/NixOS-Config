@@ -22,7 +22,7 @@ in
   };
 
   home-manager.users.${username} = {
-    imports = [ ./old-home ];
+    imports = [ ./old-home/hyprland ];
 
     home.username = "${username}";
     home.homeDirectory = "/home/${username}";
