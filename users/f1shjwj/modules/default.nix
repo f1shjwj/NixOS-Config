@@ -4,6 +4,11 @@
     ./desktop/niri.nix
     ./desktop/gamescope.nix
 
+    ./desktop/desktop-tools
+    ./desktop/desktop-tools/waybar
+    ./desktop/desktop-tools/eww
+    ./desktop/desktop-tools/kanshi.nix
+
     ./virtual/docker.nix
     ./virtual/virtualbox.nix
     # ./virtual/waydroid.nix

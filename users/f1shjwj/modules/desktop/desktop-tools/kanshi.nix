@@ -1,5 +1,6 @@
+{ username, ... }:
 {
-  services.kanshi = {
+  home-manager.users.${username}.services.kanshi = {
     enable = true;
     systemdTarget = "hyprland-session.target";
     settings = [

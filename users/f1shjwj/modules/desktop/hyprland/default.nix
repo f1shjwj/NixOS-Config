@@ -11,7 +11,6 @@
 
   home-manager.users.${username} = {
     imports = [
-      ./desktop-tools
       ./hypr/hypridle.nix
       ./hypr/hyprpaper.nix
       ./hypr/hyprlock.nix
