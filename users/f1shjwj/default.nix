@@ -1,5 +1,5 @@
 {
-  imports = [ ./modules.nix ];
+  imports = [ ./modules ];
 
   users.groups.f1shjwj.gid = 1000;
   users.users.f1shjwj = {
