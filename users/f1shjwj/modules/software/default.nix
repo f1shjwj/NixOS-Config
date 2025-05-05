@@ -10,6 +10,7 @@
       you-get
       shell-gpt # TODO: config
       fzf
+      wev
     ]
     ++ [
       vscode
