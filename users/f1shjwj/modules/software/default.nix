@@ -13,7 +13,9 @@
       wev
     ]
     ++ [
-      vscode
+      (vscode.override {
+        commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
+      })
       gnumake
       lazydocker
       nixfmt-rfc-style
@@ -54,6 +56,14 @@
     };
     obs-studio = {
       enable = true;
+    };
+    chromium = {
+      enable = true;
+      package = (
+        pkgs.vivaldi.override {
+          commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
+        }
+      );
     };
   };
 }
