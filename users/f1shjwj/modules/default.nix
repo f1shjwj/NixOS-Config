@@ -1,5 +1,6 @@
 {
   imports = [
+    ./desktop
     ./desktop/hyprland
     ./desktop/niri.nix
     ./desktop/gamescope.nix

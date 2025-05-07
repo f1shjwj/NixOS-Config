@@ -22,8 +22,6 @@ in
     home.username = "${username}";
     home.homeDirectory = "/home/${username}";
 
-    home.sessionVariables.NIXOS_OZONE_WL = "1";
-
     programs.home-manager.enable = true;
     home.stateVersion = "24.11";
   };
