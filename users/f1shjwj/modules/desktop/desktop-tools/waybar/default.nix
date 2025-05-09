@@ -4,21 +4,21 @@
     programs.waybar = {
       enable = true;
       style = ./style.css;
-      systemd = {
-        enable = true;
-        target = "hyprland-session.target";
-      };
+      # systemd = {
+      #   enable = true;
+      #   target = "hyprland-session.target";
+      # };
     };
 
     programs.waybar.settings.mainBar = {
       height = 30;
       spacing = 4;
       modules-left = [
-        "hyprland/workspaces"
+        "niri/workspaces"
         "wlr/taskbar"
       ];
       modules-center = [
-        "hyprland/window"
+        "niri/window"
       ];
       modules-right = [
         # "mpd"
@@ -35,18 +35,12 @@
         "clock"
         "custom/notification"
       ];
-      "hyprland/workspaces" = {
-        on-scroll-up = "hyprctl dispatch workspace r-1";
-        on-scroll-down = "hyprctl dispatch workspace r+1";
+      "niri/workspaces" = {
+        on-scroll-up = "niri msg action focus-workspace-up";
+        on-scroll-down = "niri msg action focus-workspace-down";
         on-click = "activate";
         active-only = false;
         all-outputs = true;
-        format = "{}";
-        format-icons = {
-          urgent = "";
-          active = "";
-          default = "";
-        };
       };
       "wlr/taskbar" = {
         format = "{icon}";
@@ -63,17 +57,12 @@
         };
         rewrite = {
           "Firefox Web Browser" = "Firefox";
-          "Foot Server" = "Terminal";
         };
       };
-      "hyprland/window" = {
+      "niri/window" = {
         max-length = 60;
         rewrite = {
-          "(.*) - Brave" = "$1";
-          "(.*) - Chromium" = "$1";
-          "(.*) - Brave Search" = "$1";
-          "(.*) - Outlook" = "$1";
-          "(.*) Microsoft Teams" = "$1";
+          "(.*) - Visual Studio Code" = "$1";
         };
         separate-outputs = true;
       };
@@ -84,7 +73,7 @@
       clock = {
         # timezone = "America/New_York";
         format = "{:%Y-%m-%d <span weight='bold'>%H:%M</span>}";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        tooltip-format = "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>";
       };
       backlight = {
         # device = "acpi_video1";

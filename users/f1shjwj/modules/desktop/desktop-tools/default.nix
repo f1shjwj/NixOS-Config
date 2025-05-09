@@ -8,6 +8,8 @@
     wl-clipboard
     cliphist
     pavucontrol
+    brightnessctl
+    playerctl
     ddcutil
     xdg-desktop-portal-hyprland
   ];

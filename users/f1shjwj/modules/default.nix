@@ -2,13 +2,12 @@
   imports = [
     ./desktop
     ./desktop/hyprland
-    ./desktop/niri.nix
+    ./desktop/niri
     ./desktop/gamescope.nix
 
     ./desktop/desktop-tools
     ./desktop/desktop-tools/waybar
     ./desktop/desktop-tools/eww
-    ./desktop/desktop-tools/kanshi.nix
 
     ./virtual/docker.nix
     ./virtual/virtualbox.nix
