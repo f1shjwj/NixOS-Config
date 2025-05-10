@@ -2,20 +2,18 @@
 {
   home-manager.users.${username}.services.kanshi = {
     enable = true;
-    systemdTarget = "hyprland-session.target";
+    # systemdTarget = "graphical-session.target"; # TODO
     settings = [
       {
         profile.name = "docked";
         profile.outputs = [
           {
             criteria = "HDMI-A-1";
-            position = "0,0";
             mode = "1920x1080@100Hz";
           }
           {
             criteria = "eDP-1";
-            position = "1920,0";
-            transform = "270";
+            status = "disable";
           }
         ];
       }
@@ -24,7 +22,6 @@
         profile.outputs = [
           {
             criteria = "eDP-1";
-            position = "0,0";
             transform = "normal";
           }
         ];

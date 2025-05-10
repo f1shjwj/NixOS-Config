@@ -11,11 +11,17 @@
     brightnessctl
     playerctl
     ddcutil
-    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
+    gtklock
+    swaybg
   ];
 
   home-manager.users.${username}.services = {
     swaync = {
+      enable = true;
+    };
+    swayidle = {
       enable = true;
     };
     udiskie.enable = true;
