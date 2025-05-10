@@ -17,10 +17,10 @@
         commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
       })
       gnumake
-      lazydocker
       nixfmt-rfc-style
       nixd
       hyprls
+      cachix
       beekeeper-studio
     ]
     ++ [
@@ -35,7 +35,6 @@
       keepassxc
       follow
       qbittorrent
-      lutris # TODO
       xfce.mousepad
     ];
 

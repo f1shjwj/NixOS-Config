@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 {
   programs.steam = {
     enable = true;
@@ -14,4 +14,8 @@
     enable = true;
     support32Bit.enable = true;
   };
+
+  users.users.${username}.packages = with pkgs; [
+    lutris
+  ];
 }

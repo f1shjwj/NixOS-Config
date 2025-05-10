@@ -1,14 +1,18 @@
-{ username, ... }:
+{ username, pkgs, ... }:
 {
   users.groups.docker.members = [ username ];
+
+  users.users.${username}.packages = with pkgs; [
+    lazydocker
+  ];
 
   virtualisation.docker = {
     enable = true;
     storageDriver = "btrfs";
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
+    # rootless = {
+    #   enable = true;
+    #   setSocketVariable = true;
+    # };
     daemon.settings = {
       userland-proxy = false;
       registry-mirrors = [

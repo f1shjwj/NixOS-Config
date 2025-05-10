@@ -19,7 +19,7 @@
     ./software/shell.nix
     ./software/power-profiles-daemon.nix
     ./software/flatpak.nix
-    ./software/steam.nix
+    ./software/games.nix
     ./software/thunar.nix
     ./software/unstable.nix
 
