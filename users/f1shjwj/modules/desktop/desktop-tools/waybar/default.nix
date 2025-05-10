@@ -6,7 +6,6 @@
       style = ./style.css;
       # systemd = {
       #   enable = true;
-      #   target = "hyprland-session.target";
       # };
     };
 
