@@ -114,6 +114,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 0.95
 
         // Fixed 将宽度精确设置为逻辑像素值。
         // fixed 1920
@@ -124,6 +125,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 0.95
     }
 
     // 您可以更改新窗口的默认宽度。

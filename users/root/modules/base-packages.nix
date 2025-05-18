@@ -9,6 +9,8 @@
     tree
     zip
     unzip
+    rar
+    unrar
     zlib
     killall
   ];

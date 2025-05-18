@@ -11,6 +11,7 @@
       shell-gpt # TODO: config
       fzf
       wev
+      tty-clock
     ]
     ++ [
       (vscode.override {
@@ -29,13 +30,13 @@
       feh
       telegram-desktop
       obsidian
-      libreoffice
       techmino
       foliate
       keepassxc
       follow
       qbittorrent
       xfce.mousepad
+      wpsoffice-cn
     ];
 
   home-manager.users.${username}.programs = {
