@@ -1,8 +1,8 @@
 { username, ... }:
 {
-  home-manager.users.${username}.programs.alacritty = {
-    enable = true;
-    settings = {
+  home-manager.users.${username} = {
+    programs.alacritty.enable = true;
+    programs.alacritty.settings = {
       colors = {
         primary = {
           background = "#15141b";

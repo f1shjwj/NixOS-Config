@@ -15,6 +15,7 @@
     ./software
     ./software/alacritty
     ./software/btop
+    ./software/dir_colors
     ./software/shell.nix
     ./software/power-profiles-daemon.nix
     ./software/flatpak.nix
