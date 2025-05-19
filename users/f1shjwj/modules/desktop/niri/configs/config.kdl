@@ -252,8 +252,7 @@ spawn-at-startup "swaybg" "-c" "#97B3D6"
 spawn-at-startup "bash" "-c" "systemctl --user start hyprpolkitagent"
 spawn-at-startup "wl-paste" "--type" "text"  "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
-spawn-at-startup "clash-verge-service"
-spawn-at-startup "clash-verge"
+spawn-at-startup "bash" "-c" "clash-verge-service & clash-verge"
 
 // 取消注释此行以请求客户端尽可能省略其客户端装饰。
 // 若客户端明确要求使用CSD（客户端装饰），则该请求仍会被尊重。

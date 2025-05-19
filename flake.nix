@@ -17,7 +17,6 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
-      chinese-fonts-overlay,
       ...
     }:
     let
@@ -25,7 +24,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ chinese-fonts-overlay.overlays.default ];
       };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
@@ -37,11 +35,12 @@
           "clash-verge-rev-unwrapped-2.2.3"
         ];
       };
+      specialArgs = { inherit inputs pkgs-unstable; };
       home-manager-module = [
         home-manager.nixosModules.home-manager
         {
           home-manager = {
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = specialArgs;
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
@@ -53,7 +52,7 @@
       nixosConfigurations = {
         "F1shjwj-Code01" = nixpkgs.lib.nixosSystem {
           inherit pkgs;
-          specialArgs = { inherit inputs pkgs-unstable; };
+          specialArgs = specialArgs;
           modules =
             home-manager-module
             ++ [ ./hosts/Code01 ]

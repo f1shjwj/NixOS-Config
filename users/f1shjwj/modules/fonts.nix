@@ -1,5 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  nixpkgs.overlays = [ inputs.chinese-fonts-overlay.overlays.default ];
+
   fonts.fontDir.enable = true;
 
   fonts.packages =

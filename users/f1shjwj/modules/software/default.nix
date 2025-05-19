@@ -37,6 +37,7 @@
       qbittorrent
       xfce.mousepad
       wpsoffice-cn
+      mission-center
     ];
 
   home-manager.users.${username}.programs = {

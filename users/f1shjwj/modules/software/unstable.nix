@@ -2,6 +2,10 @@
 {
   users.users.${username}.packages = with pkgs-unstable; [
     gimp3
-    clash-verge-rev
   ];
+
+  programs.clash-verge = {
+    enable = true;
+    package = pkgs-unstable.clash-verge-rev;
+  };
 }
