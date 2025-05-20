@@ -10,6 +10,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
     chinese-fonts-overlay.url = "github:brsvh/chinese-fonts-overlay/main";
+    grub2-themes.url = "github:vinceliuice/grub2-themes";
   };
 
   outputs =

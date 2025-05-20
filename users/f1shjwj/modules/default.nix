@@ -26,5 +26,7 @@
     ./greetd.nix
     ./fcitx5.nix
     ./fonts.nix
+    ./grub2-themes.nix
+    ./i2c.nix
   ];
 }
