@@ -1,8 +1,5 @@
 # F1shjwj's NixOS Config
 
-建议先正常安装NixOS后再使用配置。
+NixOS 纯萌新自己折腾的，配置结构一坨，commit 一坨。
 
-```bash
-sudo ln -s ~/nixos-config /etc/nixos
-sudo nixos-rebuild switch
-```
+本来想着整好配置或者至少整好 commit 再传 Github，但在误删一次分区表后决定先传上来备份再说。
