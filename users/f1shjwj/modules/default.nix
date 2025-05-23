@@ -28,5 +28,6 @@
     ./fonts.nix
     ./grub2-themes.nix
     ./i2c.nix
+    ./wine.nix
   ];
 }

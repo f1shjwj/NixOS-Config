@@ -9,10 +9,6 @@
   virtualisation.docker = {
     enable = true;
     storageDriver = "btrfs";
-    # rootless = {
-    #   enable = true;
-    #   setSocketVariable = true;
-    # };
     daemon.settings = {
       userland-proxy = false;
       registry-mirrors = [
