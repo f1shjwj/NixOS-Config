@@ -22,7 +22,7 @@
       nixd
       hyprls
       cachix
-      beekeeper-studio
+      # beekeeper-studio
     ]
     ++ [
       firefox
