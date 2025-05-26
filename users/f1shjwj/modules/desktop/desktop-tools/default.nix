@@ -8,8 +8,6 @@
     brightnessctl
     ddcutil
     playerctl
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-gnome
     gtklock
     swaybg
   ];

@@ -16,11 +16,11 @@
     ++ [
       (vscode.override {
         commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
-      })
+      }).fhs
       gnumake
       nixfmt-rfc-style
       nixd
-      hyprls
+      kdlfmt
       cachix
       # beekeeper-studio
     ]
@@ -36,8 +36,9 @@
       follow
       qbittorrent
       xfce.mousepad
-      wpsoffice-cn
+      # wpsoffice-cn
       mission-center
+      gimp3
     ];
 
   home-manager.users.${username}.programs = {
