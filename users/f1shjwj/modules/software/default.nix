@@ -20,7 +20,7 @@
       gnumake
       nixfmt-rfc-style
       nixd
-      kdlfmt
+      nix-search-tv
       cachix
       # beekeeper-studio
     ]
@@ -36,10 +36,16 @@
       follow
       qbittorrent
       xfce.mousepad
-      # wpsoffice-cn
+      wpsoffice-cn
       mission-center
       gimp3
     ];
+
+  # https://nixos.wiki/wiki/Appimage
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
   home-manager.users.${username}.programs = {
     yazi = {
@@ -55,9 +61,6 @@
       userEmail = "jwjawa@outlook.com";
     };
     lazygit = {
-      enable = true;
-    };
-    obs-studio = {
       enable = true;
     };
     chromium = {

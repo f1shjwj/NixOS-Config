@@ -11,6 +11,10 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
     chinese-fonts-overlay.url = "github:brsvh/chinese-fonts-overlay/main";
     grub2-themes.url = "github:vinceliuice/grub2-themes";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -48,6 +52,7 @@
           };
         }
       ];
+      nur-module = [ inputs.nur.modules.nixos.default ];
     in
     {
       nixosConfigurations = {
@@ -56,6 +61,7 @@
           specialArgs = specialArgs;
           modules =
             home-manager-module
+            ++ nur-module
             ++ [ ./hosts/Code01 ]
             ++ [
               ./users/root

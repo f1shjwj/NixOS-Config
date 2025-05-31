@@ -17,6 +17,7 @@
     ++ [
       corefonts
       windows-fonts
+      nur.repos.rewine.ttf-wps-fonts
     ]
     ++ [
       font-awesome

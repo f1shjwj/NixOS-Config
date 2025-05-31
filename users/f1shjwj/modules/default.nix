@@ -22,6 +22,7 @@
     ./software/games.nix
     ./software/thunar.nix
     ./software/unstable.nix
+    ./software/obs-studio.nix
 
     ./greetd.nix
     ./fcitx5.nix
