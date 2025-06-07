@@ -4,9 +4,7 @@
     programs.waybar = {
       enable = true;
       style = ./style.css;
-      # systemd = {
-      #   enable = true;
-      # };
+      systemd.enable = true;
     };
 
     programs.waybar.settings.mainBar = {
@@ -15,10 +13,9 @@
       modules-left = [
         "niri/workspaces"
         "wlr/taskbar"
-      ];
-      modules-center = [
         "niri/window"
       ];
+      modules-center = [ ];
       modules-right = [
         # "mpd"
         # "idle_inhibitor"

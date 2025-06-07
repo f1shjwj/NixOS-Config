@@ -30,5 +30,6 @@
     ./grub2-themes.nix
     ./i2c.nix
     ./wine.nix
+    ./cups-pdf.nix
   ];
 }

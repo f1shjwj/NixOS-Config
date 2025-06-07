@@ -17,6 +17,9 @@
       (vscode.override {
         commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
       }).fhs
+      (code-cursor.override {
+        commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
+      })
       gnumake
       nixfmt-rfc-style
       nixd
@@ -39,6 +42,7 @@
       wpsoffice-cn
       mission-center
       gimp3
+      netease-cloud-music-gtk
     ];
 
   # https://nixos.wiki/wiki/Appimage
