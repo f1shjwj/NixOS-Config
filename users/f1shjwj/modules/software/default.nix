@@ -43,6 +43,7 @@
       mission-center
       gimp3
       netease-cloud-music-gtk
+      rustdesk
     ];
 
   # https://nixos.wiki/wiki/Appimage
@@ -58,7 +59,10 @@
     fastfetch = {
       enable = true;
     };
-    direnv.enable = true;
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
     git = {
       enable = true;
       userName = "F1shjwj";

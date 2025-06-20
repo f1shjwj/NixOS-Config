@@ -13,5 +13,8 @@
     fish.interactiveShellInit = ''
       set -g fish_greeting "Welcome, F1shjwj! Time is $(date +%H:%M)"
     '';
+    fish.shellAliases = {
+      qqf = "flatpak run com.qq.QQ --enable-wayland-ime --wayland-text-input-version=3";
+    };
   };
 }

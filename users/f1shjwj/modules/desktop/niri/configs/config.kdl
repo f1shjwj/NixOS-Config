@@ -105,15 +105,12 @@ binds {
     Mod+Slash { show-hotkey-overlay; }
 
     Mod+Grave   { spawn "alacritty"; }
-    Mod+Tab     { spawn "rofi" "-show" "combi" "-combi-modi" "drun,run" "-modi" "combi"; }
+    Mod+Space   { spawn "rofi" "-show" "combi" "-combi-modi" "drun,run" "-modi" "combi"; }
     Super+Alt+L { spawn "gtklock"; }
     Mod+E { spawn "thunar"; }
     Mod+P { spawn "wlogout"; }
     Mod+V { spawn "bash" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
     Mod+Shift+Period { spawn "missioncenter"; }
-
-    // Mod+C { spawn "code"; }
-    // Mod+B { spawn "vivaldi"; }
 
     XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
     XF86AudioLowerVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
@@ -221,7 +218,7 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
@@ -245,7 +242,7 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    // Mod+V       { toggle-window-floating; }
+    Mod+Ctrl+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     Mod+W { toggle-column-tabbed-display; }
