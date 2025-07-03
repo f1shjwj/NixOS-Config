@@ -21,7 +21,7 @@
     ./software/flatpak.nix
     ./software/games.nix
     ./software/thunar.nix
-    ./software/unstable.nix
+    ./software/clash.nix
     ./software/obs-studio.nix
 
     ./greetd.nix
@@ -31,5 +31,6 @@
     ./i2c.nix
     ./wine.nix
     ./cups-pdf.nix
+    ./time.nix
   ];
 }

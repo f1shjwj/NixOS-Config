@@ -26,6 +26,7 @@
       nix-search-tv
       cachix
       # beekeeper-studio
+      gemini-cli
     ]
     ++ [
       firefox
@@ -33,7 +34,6 @@
       feh
       telegram-desktop
       obsidian
-      techmino
       foliate
       keepassxc
       follow
@@ -44,6 +44,11 @@
       gimp3
       netease-cloud-music-gtk
       rustdesk
+      peazip
+    ]
+    ++ [
+      techmino
+      hmcl
     ];
 
   # https://nixos.wiki/wiki/Appimage
