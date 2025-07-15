@@ -31,6 +31,6 @@
     ./i2c.nix
     ./wine.nix
     ./cups-pdf.nix
-    ./time.nix
+    ./proxy.nix
   ];
 }
