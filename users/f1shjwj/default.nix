@@ -3,7 +3,7 @@ let
 in
 {
   _module.args = { inherit username; };
-  imports = [ ./modules ];
+  imports = [ ./modules.nix ];
 
   users.groups.${username}.gid = 1000;
   users.users.${username} = {

@@ -17,5 +17,7 @@
 
   users.users.${username}.packages = with pkgs; [
     lutris
+    techmino
+    hmcl
   ];
 }

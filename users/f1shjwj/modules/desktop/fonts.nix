@@ -15,11 +15,6 @@
       source-han-serif
     ]
     ++ [
-      corefonts
-      windows-fonts
-      nur.repos.rewine.ttf-wps-fonts
-    ]
-    ++ [
       font-awesome
       noto-fonts-emoji
     ];
