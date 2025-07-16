@@ -1,11 +1,14 @@
 {
   imports = [
-    ./modules/desktop
     ./modules/desktop/niri
     ./modules/desktop/greetd.nix
     ./modules/desktop/fcitx5.nix
-    ./modules/desktop/fonts.nix
     ./modules/desktop/grub2-themes.nix
+    ./modules/desktop/core
+    ./modules/desktop/core/gtk.nix
+    ./modules/desktop/core/xdg.nix
+    ./modules/desktop/core/xresources-properties.nix
+    ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/waybar
     ./modules/desktop/desktop-tools/eww

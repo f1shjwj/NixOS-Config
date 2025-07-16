@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   i18n.inputMethod = {
     enable = true;
@@ -15,5 +15,11 @@
 
   environment.sessionVariables = {
     QT_IM_MODULE = "fcitx";
+  };
+
+  home-manager.users.${username}.gtk = {
+    gtk2.extraConfig = ''gtk-im-module="fcitx"'';
+    gtk3.extraConfig.gtk-im-module = ''fcitx'';
+    gtk4.extraConfig.gtk-im-module = ''fcitx'';
   };
 }
