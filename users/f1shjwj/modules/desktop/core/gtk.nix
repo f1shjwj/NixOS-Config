@@ -1,8 +1,15 @@
-{ username, ... }:
+{ username, pkgs, ... }:
 {
   home-manager.users.${username}.gtk = {
     enable = true;
-    # gtk2.configLocation = "$HOME/.config/gtk-2.0/gtkrc";
-    # theme,iconTheme,cursorTheme
+
+    theme = {
+      name = "Orchis-Light";
+      package = pkgs.orchis-theme;
+    };
+    iconTheme = {
+      name = "Tela-blue-light";
+      package = pkgs.tela-icon-theme;
+    };
   };
 }

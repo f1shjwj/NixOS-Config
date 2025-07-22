@@ -1,13 +1,15 @@
 {
   imports = [
     ./modules/desktop/niri
-    ./modules/desktop/greetd.nix
     ./modules/desktop/fcitx5.nix
-    ./modules/desktop/grub2-themes.nix
-    ./modules/desktop/plymouth.nix
+    ./modules/desktop/startup/greetd.nix
+    ./modules/desktop/startup/grub2-themes.nix
+    ./modules/desktop/startup/plymouth.nix
     ./modules/desktop/core
     ./modules/desktop/core/gtk.nix
+    ./modules/desktop/core/qt.nix
     ./modules/desktop/core/xdg.nix
+    ./modules/desktop/core/cursor.nix
     ./modules/desktop/core/xresources-properties.nix
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
