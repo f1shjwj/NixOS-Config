@@ -4,6 +4,7 @@
     ./modules/desktop/greetd.nix
     ./modules/desktop/fcitx5.nix
     ./modules/desktop/grub2-themes.nix
+    ./modules/desktop/plymouth.nix
     ./modules/desktop/core
     ./modules/desktop/core/gtk.nix
     ./modules/desktop/core/xdg.nix
@@ -12,6 +13,8 @@
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/waybar
     ./modules/desktop/desktop-tools/eww
+    ./modules/desktop/desktop-tools/swayidle.nix
+    ./modules/desktop/desktop-tools/gtklock.nix
     # ./modules/desktop/desktop-tools/kanshi.nix
 
     ./modules/virtual/docker.nix

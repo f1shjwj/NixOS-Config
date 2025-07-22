@@ -3,8 +3,12 @@
   users.groups.docker.members = [ username ];
 
   users.users.${username}.packages = with pkgs; [
-    lazydocker
+    docker-compose
   ];
+
+  home-manager.users.${username}.programs = {
+    lazydocker.enable = true;
+  };
 
   virtualisation.docker = {
     enable = true;
