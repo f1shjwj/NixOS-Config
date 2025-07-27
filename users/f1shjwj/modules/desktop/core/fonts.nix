@@ -2,20 +2,27 @@
 {
   nixpkgs.overlays = [ inputs.chinese-fonts-overlay.overlays.default ];
 
-  fonts.fontDir.enable = true;
+  fonts.fontDir = {
+    enable = true;
+    decompressFonts = true;
+  };
+
+  fonts.enableDefaultPackages = true;
 
   fonts.packages =
     with pkgs;
-    [ nerd-fonts.hack ]
+    [
+      nerd-fonts.hack
+      nerd-fonts.symbols-only
+    ]
     ++ [
-      dejavu_fonts
       source-sans
       source-serif
       source-han-sans
       source-han-serif
     ]
     ++ [
-      font-awesome
+      font-awesome_6
       noto-fonts-emoji
     ];
 
@@ -23,10 +30,12 @@
     serif = [
       "Source Han Serif SC"
       "Source Han Serif TC"
+      "Symbols Nerd Font"
     ];
     sansSerif = [
       "Source Han Sans SC"
       "Source Han Sans TC"
+      "Symbols Nerd Font"
     ];
     monospace = [
       "Hack Nerd Font"

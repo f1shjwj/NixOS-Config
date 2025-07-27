@@ -1,6 +1,7 @@
 {
   imports = [
     ./modules/desktop/niri
+    ./modules/desktop/niri/autostart.nix
     ./modules/desktop/fcitx5.nix
     ./modules/desktop/startup/greetd.nix
     ./modules/desktop/startup/grub2-themes.nix
@@ -14,9 +15,9 @@
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/waybar
-    ./modules/desktop/desktop-tools/eww
     ./modules/desktop/desktop-tools/swayidle.nix
     ./modules/desktop/desktop-tools/gtklock.nix
+    ./modules/desktop/desktop-tools/polkit.nix
     # ./modules/desktop/desktop-tools/kanshi.nix
 
     ./modules/virtual/docker.nix
@@ -33,7 +34,6 @@
     ./modules/software/gui/browser.nix
     ./modules/software/gui/flatpak.nix
     ./modules/software/gui/thunar.nix
-    ./modules/software/gui/clash.nix
     ./modules/software/gui/obs-studio.nix
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix
