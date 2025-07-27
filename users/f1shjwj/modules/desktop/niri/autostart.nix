@@ -27,5 +27,17 @@ in
         Restart = "on-failure";
       };
     };
+
+    qq = {
+      description = "QQ";
+      partOf = graphicalSessionTarget;
+      after = graphicalSessionTarget;
+      requisite = graphicalSessionTarget;
+      wantedBy = graphicalSessionTarget;
+      serviceConfig = {
+        ExecStart = "${pkgs.flatpak}/bin/flatpak run com.qq.QQ --enable-wayland-ime --wayland-text-input-version=3";
+        Restart = "on-failure";
+      };
+    };
   };
 }

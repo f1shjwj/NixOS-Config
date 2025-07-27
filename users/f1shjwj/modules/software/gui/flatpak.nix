@@ -1,6 +1,7 @@
 {
   username,
   inputs,
+  pkgs,
   lib,
   ...
 }:
@@ -15,6 +16,8 @@ let
 in
 {
   services.flatpak.enable = true;
+
+  users.users.${username}.packages = [ pkgs.flatpak ];
 
   # https://github.com/gmodena/nix-flatpak/
   home-manager.users.${username} = {
