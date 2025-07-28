@@ -25,7 +25,7 @@
     # ./modules/virtual/waydroid.nix
 
     ./modules/software/cli
-    ./modules/software/cli/alacritty
+    ./modules/software/cli/wezterm
     ./modules/software/cli/btop
     ./modules/software/cli/git.nix
     ./modules/software/cli/shell

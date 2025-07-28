@@ -93,7 +93,7 @@ window-rule {
     block-out-from "screen-capture"
 }
 window-rule {
-    match app-id="Alacritty"
+    match app-id="org.wezfurlong.wezterm"
     default-column-width { proportion 0.5; }
 }
 window-rule {
@@ -108,7 +108,7 @@ window-rule {
 binds {
     Mod+Slash { show-hotkey-overlay; }
 
-    Mod+Grave   { spawn "alacritty"; }
+    Mod+Grave   { spawn "wezterm"; }
     Mod+Space   { spawn "rofi" "-show" "combi" "-combi-modi" "drun,run" "-modi" "combi"; }
     Super+Alt+L { spawn "gtklock"; }
     Mod+E { spawn "thunar"; }

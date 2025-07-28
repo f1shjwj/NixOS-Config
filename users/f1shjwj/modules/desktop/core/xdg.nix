@@ -13,7 +13,7 @@
     terminal-exec = {
       enable = true;
       settings = {
-        default = [ "alacritty.desktop" ];
+        default = [ "org.wezfurlong.wezterm.desktop" ];
       };
     };
   };
