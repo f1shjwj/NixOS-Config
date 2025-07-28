@@ -27,6 +27,7 @@
     ./modules/software/cli
     ./modules/software/cli/wezterm
     ./modules/software/cli/btop
+    ./modules/software/cli/fastfetch
     ./modules/software/cli/git.nix
     ./modules/software/cli/shell
     ./modules/software/cli/shell/dir_colors

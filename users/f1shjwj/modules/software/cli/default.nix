@@ -39,10 +39,6 @@
       enable = true;
     };
 
-    fastfetch = {
-      enable = true;
-    };
-
     direnv = {
       enable = true;
       nix-direnv.enable = true;
