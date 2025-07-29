@@ -1,24 +1,28 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-local my_font = wezterm.font('Hack Nerd Font')
+local my_font = wezterm.font_with_fallback({
+    'Hack Nerd Font',
+    'Source Han Sans SC',
+})
 
-config.term = 'wezterm'
-config.color_scheme = "jwj-theme"
-config.font = my_font
-config.font_size = 14
-
-config.enable_scroll_bar = true
-config.min_scroll_bar_height = 32
-
-config.front_end = 'WebGpu'
-config.window_background_opacity = 0.95
-config.window_frame = {
+config = {
+    term = 'wezterm',
+    color_scheme = "jwj-theme",
     font = my_font,
-    font_size = 12,
+    font_size = 14,
+    enable_scroll_bar = true,
+    min_scroll_bar_height = 32,
+    use_ime = true,
+    front_end = 'WebGpu',
+    window_frame = {
+        font = my_font,
+        font_size = 12,
+    },
+    tab_max_width = 25,
+    switch_to_last_active_tab_when_closing_tab = true,
+    scrollback_lines = 10000,
+    default_cursor_style = 'SteadyBar',
 }
-
-config.scrollback_lines = 10000
-config.default_cursor_style = 'SteadyBar'
 
 return config
