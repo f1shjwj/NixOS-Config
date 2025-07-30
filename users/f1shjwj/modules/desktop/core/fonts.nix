@@ -37,9 +37,7 @@
       "Source Han Sans TC"
       "Symbols Nerd Font"
     ];
-    monospace = [
-      "Hack Nerd Font"
-    ];
+    monospace = [ "Hack Nerd Font" ];
     emoji = [ "Noto Color Emoji" ];
   };
 }

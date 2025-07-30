@@ -1,3 +1,1 @@
-{
-  services.printing.cups-pdf.enable = true;
-}
+{ services.printing.cups-pdf.enable = true; }
