@@ -1,17 +1,22 @@
-{ pkgs, username, ... }:
 {
-  users.users.${username}.packages = with pkgs; [
-    firefox
-  ];
-
-  home-manager.users.${username}.programs = {
-    chromium = {
+  pkgs,
+  username,
+  inputs,
+  ...
+}:
+{
+  home-manager.users.${username} = {
+    imports = [ inputs.zen-browser.homeModules.beta ];
+    programs.zen-browser = {
       enable = true;
-      package = (
-        pkgs.vivaldi.override {
-          commandLineArgs = "--enable-wayland-ime=true --wayland-text-input-version=3";
-        }
-      );
+      nativeMessagingHosts = with pkgs; [ keepassxc ];
+      policies = {
+        Preferences = {
+          "browser.tabs.groups.enabled" = true;
+        };
+      };
     };
   };
+
+  users.users.${username}.packages = with pkgs; [ chromium ];
 }

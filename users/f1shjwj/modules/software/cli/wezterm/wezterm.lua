@@ -14,7 +14,6 @@ config = {
     enable_scroll_bar = true,
     min_scroll_bar_height = 32,
     use_ime = true,
-    front_end = 'WebGpu',
     window_frame = {
         font = my_font,
         font_size = 12,
