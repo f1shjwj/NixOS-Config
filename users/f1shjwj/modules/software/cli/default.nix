@@ -10,8 +10,10 @@
       # 开发工具
       neovim # TODO
       gnumake
+      devenv
 
       # Nix 相关工具
+      nh
       nixfmt-rfc-style
       nixd
       nix-search-tv
