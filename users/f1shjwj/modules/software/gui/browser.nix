@@ -10,10 +10,8 @@
     programs.zen-browser = {
       enable = true;
       nativeMessagingHosts = with pkgs; [ keepassxc ];
-      policies = {
-        Preferences = {
-          "browser.tabs.groups.enabled" = true;
-        };
+      policies.Preferences = {
+        "browser.tabs.groups.enabled" = true;
       };
     };
   };

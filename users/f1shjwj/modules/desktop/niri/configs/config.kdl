@@ -29,7 +29,6 @@ output "eDP-1" {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     gaps 10
-    center-focused-column "on-overflow"
     always-center-single-column
     preset-column-widths {
         proportion 0.33333
