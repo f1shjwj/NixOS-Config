@@ -1,4 +1,4 @@
-{ username, pkgs, ... }:
+{ username, pkgs, inputs, ... }:
 {
   programs.steam = {
     enable = true;
@@ -15,9 +15,11 @@
     support32Bit.enable = true;
   };
 
+  nixpkgs.overlays = [ inputs.prismlauncher-cracked.overlays.default ];
+
   users.users.${username}.packages = with pkgs; [
     lutris
     techmino
-    hmcl
+    prismlauncher
   ];
 }
