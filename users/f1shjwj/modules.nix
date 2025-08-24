@@ -21,7 +21,7 @@
     # ./modules/desktop/desktop-tools/kanshi.nix
 
     ./modules/virtual/docker.nix
-    ./modules/virtual/virtualbox.nix
+    # ./modules/virtual/virtualbox.nix
     # ./modules/virtual/waydroid.nix
 
     ./modules/software/cli

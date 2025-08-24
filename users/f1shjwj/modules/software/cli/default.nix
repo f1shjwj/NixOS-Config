@@ -31,6 +31,7 @@
       ffmpeg
       pandoc
       imagemagick
+      ncdu
     ])
     ++ (with pkgs-unstable; [
       gemini-cli
