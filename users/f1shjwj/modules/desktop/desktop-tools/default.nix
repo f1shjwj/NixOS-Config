@@ -8,8 +8,6 @@
 
     wl-clipboard
 
-    swaybg
-
     networkmanagerapplet
   ];
 

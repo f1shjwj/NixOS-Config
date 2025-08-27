@@ -30,6 +30,7 @@ output "eDP-1" {
 layout {
     gaps 10
     always-center-single-column
+    background-color "#7f7f7f"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -44,7 +45,7 @@ layout {
     focus-ring {
         // off
         width 3
-        active-color "#c5d3e4"
+        active-color "#a0a0a0"
         inactive-color "#505050"
     }
     border {

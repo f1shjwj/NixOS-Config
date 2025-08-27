@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #1e1e1e;
+    background-color: rgba(30, 30, 30, 0.5);
+    color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -13,7 +13,7 @@ window#waybar {
 tooltip {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.2);
 }
@@ -27,7 +27,7 @@ button {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #1e1e1e;
+    color: #ffffff;
 }
 
 #workspaces button.active {
@@ -36,7 +36,7 @@ button {
 
 #workspaces button.focused,
 #taskbar button.active {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 -2px #ffffff;
 }
 
@@ -52,7 +52,7 @@ button {
 #pulseaudio:hover,
 #power-profiles-daemon:hover,
 #custom-notification:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 -2px #ffffff;
 }
 
@@ -69,7 +69,7 @@ button {
 #power-profiles-daemon,
 #custom-notification {
     padding: 0 10px;
-    color: #1e1e1e;
+    color: #ffffff;
     min-width: 18px;
 }
 
@@ -97,7 +97,7 @@ button {
 }
 
 #battery.critical:not(.charging) {
-    color: #1e1e1e;
+    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
