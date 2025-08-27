@@ -1,4 +1,9 @@
-{ username, pkgs, inputs, ... }:
+{
+  username,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   programs.steam = {
     enable = true;

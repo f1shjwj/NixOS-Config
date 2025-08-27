@@ -1,14 +1,18 @@
 let
-  port = 7897;
+  proxyPort = 2080;
+  localConfig = ./sing-box/config.json;
 in
 {
   networking.proxy = {
     # http://user:password@proxy:port/
-    default = "http://127.0.0.1:${toString port}";
+    default = "http://127.0.0.1:${toString proxyPort}";
     noProxy = "127.0.0.1,localhost,internal.domain";
   };
 
-  networking.firewall.allowedTCPPorts = [ port ];
+  networking.firewall.allowedTCPPorts = [ proxyPort ];
 
-  programs.clash-verge.enable = true;
+  services.sing-box = {
+    enable = true;
+    settings = builtins.fromJSON (builtins.readFile localConfig);
+  };
 }
