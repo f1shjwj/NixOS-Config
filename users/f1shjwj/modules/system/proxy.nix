@@ -1,6 +1,7 @@
+{ pkgs, ... }:
 let
-  proxyPort = 2080;
-  localConfig = ./sing-box/config.json;
+  proxyPort = 7890;
+  localConfig = ./mihomo/config.yaml;
 in
 {
   networking.proxy = {
@@ -11,8 +12,9 @@ in
 
   networking.firewall.allowedTCPPorts = [ proxyPort ];
 
-  services.sing-box = {
+  services.mihomo = {
     enable = true;
-    settings = builtins.fromJSON (builtins.readFile localConfig);
+    webui = pkgs.zashboard;
+    configFile = localConfig;
   };
 }
