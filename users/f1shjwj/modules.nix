@@ -32,6 +32,7 @@
     ./modules/software/cli/shell
     ./modules/software/cli/shell/dir_colors
     ./modules/software/gui
+    ./modules/software/gui/vscode.nix
     ./modules/software/gui/browser.nix
     ./modules/software/gui/flatpak.nix
     ./modules/software/gui/thunar.nix
