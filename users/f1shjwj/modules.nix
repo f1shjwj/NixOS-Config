@@ -31,6 +31,7 @@
     ./modules/software/cli/git.nix
     ./modules/software/cli/shell
     ./modules/software/cli/shell/dir_colors
+    ./modules/software/cli/cloudflared.nix
     ./modules/software/gui
     ./modules/software/gui/vscode.nix
     ./modules/software/gui/browser.nix
@@ -39,6 +40,7 @@
     ./modules/software/gui/obs-studio.nix
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix
+    ./modules/software/gui/n8n.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix
