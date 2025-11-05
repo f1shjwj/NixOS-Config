@@ -35,6 +35,7 @@
     ])
     ++ (with pkgs-unstable; [
       gemini-cli
+      codex
     ]);
 
   home-manager.users.${username}.programs = {

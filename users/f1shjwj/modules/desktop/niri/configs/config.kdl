@@ -28,7 +28,7 @@ output "eDP-1" {
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    gaps 10
+    gaps 0
     always-center-single-column
     background-color "#7f7f7f"
     preset-column-widths {
@@ -43,31 +43,16 @@ layout {
     }
     default-column-width { }
     focus-ring {
-        // off
-        width 3
-        active-color "#a0a0a0"
-        inactive-color "#505050"
-    }
-    border {
         off
-        width 3
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
+        // width 3
+        // active-color "#a0a0a0"
+        // inactive-color "#505050"
     }
-    shadow {
-        on
-        softness 30
-        spread 2
-        offset x=0 y=0
-        color "#0007"
-    }
+    border { off; }
     tab-indicator { hide-when-single-tab; }
     struts { }
 }
 
-spawn-at-startup "xwayland-satellite"
-environment { DISPLAY ":0"; }
 spawn-at-startup "soteria"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -80,9 +65,11 @@ animations {
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 window-rule {
-    geometry-corner-radius 5
-    clip-to-geometry true
     draw-border-with-background false
+}
+window-rule {
+    match is-active=false
+    opacity 0.9
 }
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"

@@ -14,9 +14,9 @@
       obsidian
 
       # 社交
-      follow
+      # follow
       telegram-desktop
-      feishu
+      # feishu
 
       # 通用
       mpv
@@ -26,10 +26,10 @@
       qbittorrent
       xfce.mousepad
       mission-center
-      gimp3
-      rustdesk
+      # gimp3
+      # rustdesk
       peazip
-      resilio-sync
+      # resilio-sync
       # ventoy
     ])
     ++ (with pkgs-unstable; [

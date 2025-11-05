@@ -17,5 +17,6 @@
       qqf = "flatpak run com.qq.QQ --enable-wayland-ime --wayland-text-input-version=3";
       lazypodman = "DOCKER_HOST=unix:///run/user/$(id -u)/podman/podman.sock lazydocker";
     };
+    nushell.enable = true;
   };
 }
