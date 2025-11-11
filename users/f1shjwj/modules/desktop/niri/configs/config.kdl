@@ -96,11 +96,11 @@ binds {
     Mod+Slash { show-hotkey-overlay; }
 
     Mod+Grave   { spawn "wezterm"; }
-    Mod+Space   { spawn "rofi" "-show" "combi" "-combi-modi" "drun,run" "-modi" "combi"; }
     Super+Alt+L { spawn "gtklock"; }
     Mod+E { spawn "thunar"; }
     Mod+P { spawn "wlogout"; }
-    Mod+V { spawn "bash" "-c" "cliphist list | rofi -dmenu | cliphist decode | wl-copy"; }
+    Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
+    Mod+V       repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
     Mod+Shift+Period { spawn "missioncenter"; }
 
     XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
