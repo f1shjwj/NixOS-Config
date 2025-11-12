@@ -12,17 +12,8 @@
   ];
 
   home-manager.users.${username} = {
-    programs = {
-      wlogout.enable = true;
-      rofi = {
-        enable = true;
-        package = pkgs.rofi-wayland;
-      };
-    };
-
     services = {
       cliphist.enable = true;
-      swaync.enable = true;
       udiskie.enable = true;
       network-manager-applet.enable = true;
       blueman-applet.enable = true;

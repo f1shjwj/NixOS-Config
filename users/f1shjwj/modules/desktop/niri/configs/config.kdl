@@ -30,7 +30,7 @@ output "eDP-1" {
 layout {
     gaps 0
     always-center-single-column
-    background-color "#7f7f7f"
+    background-color "#41454E"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -93,14 +93,16 @@ window-rule {
 }
 
 binds {
-    Mod+Slash { show-hotkey-overlay; }
+    Mod+Slash   repeat=false { show-hotkey-overlay; }
 
     Mod+Grave   { spawn "wezterm"; }
-    Super+Alt+L { spawn "gtklock"; }
-    Mod+E { spawn "thunar"; }
-    Mod+P { spawn "wlogout"; }
+    Mod+E       { spawn "thunar"; }
+    
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
     Mod+V       repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
+    Mod+S       repeat=false { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
+    Mod+P       repeat=false { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Super+Alt+L repeat=false { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     Mod+Shift+Period { spawn "missioncenter"; }
 
     XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
@@ -108,8 +110,8 @@ binds {
     XF86AudioMute           allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    XF86MonBrightnessUp     allow-when-locked=true { spawn "brightnessctl" "s" "10%+"; }
-    XF86MonBrightnessDown   allow-when-locked=true { spawn "brightnessctl" "s" "10%-"; }
+    XF86MonBrightnessUp     allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86MonBrightnessDown   allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
 
     XF86AudioNext   allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPause  allow-when-locked=true { spawn "playerctl" "play-pause"; }
@@ -120,19 +122,11 @@ binds {
 
     Mod+Shift+Q { close-window; }
 
-    Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-or-workspace-down; }
-    Mod+Up    { focus-window-or-workspace-up; }
-    Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-or-workspace-down; }
     Mod+K     { focus-window-or-workspace-up; }
     Mod+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down-or-to-workspace-down; }
-    Mod+Ctrl+Up    { move-window-up-or-to-workspace-up; }
-    Mod+Ctrl+Right { move-column-right; }
     Mod+Ctrl+H     { move-column-left; }
     Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
     Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
@@ -143,19 +137,11 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Left  { focus-monitor-left; }
-    Mod+Shift+Down  { focus-monitor-down; }
-    Mod+Shift+Up    { focus-monitor-up; }
-    Mod+Shift+Right { focus-monitor-right; }
     Mod+Shift+H     { focus-monitor-left; }
     Mod+Shift+J     { focus-monitor-down; }
     Mod+Shift+K     { focus-monitor-up; }
     Mod+Shift+L     { focus-monitor-right; }
 
-    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
     Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
