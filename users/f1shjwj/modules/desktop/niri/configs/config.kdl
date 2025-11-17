@@ -81,14 +81,9 @@ window-rule {
 }
 window-rule {
     match app-id="org.wezfurlong.wezterm"
-    default-column-width { proportion 0.5; }
-}
-window-rule {
     match app-id="org.telegram.desktop"
-    default-column-width { proportion 0.5; }
-}
-window-rule {
     match app-id="QQ"
+    match app-id="wechat"
     default-column-width { proportion 0.5; }
 }
 

@@ -23,7 +23,19 @@ in
       requisite = graphicalSessionTarget;
       wantedBy = graphicalSessionTarget;
       serviceConfig = {
-        ExecStart = "${pkgs.flatpak}/bin/flatpak run com.qq.QQ --enable-wayland-ime --wayland-text-input-version=3";
+        ExecStart = "${pkgs.flatpak}/bin/flatpak run com.qq.QQ";
+        Restart = "on-failure";
+      };
+    };
+
+    wechat = {
+      description = "Wechat";
+      partOf = graphicalSessionTarget;
+      after = graphicalSessionTarget;
+      requisite = graphicalSessionTarget;
+      wantedBy = graphicalSessionTarget;
+      serviceConfig = {
+        ExecStart = "${pkgs.flatpak}/bin/flatpak run com.tencent.WeChat";
         Restart = "on-failure";
       };
     };
