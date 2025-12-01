@@ -55,6 +55,8 @@ layout {
 
 spawn-at-startup "soteria"
 
+hotkey-overlay { skip-at-startup; }
+
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
@@ -95,7 +97,6 @@ binds {
     
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
     Mod+V       repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
-    Mod+Tab     repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows"; }
     Mod+S       repeat=false { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+P       repeat=false { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Super+Alt+L repeat=false { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }

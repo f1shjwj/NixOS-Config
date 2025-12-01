@@ -36,6 +36,7 @@
     ++ (with pkgs-unstable; [
       gemini-cli
       codex
+      claude-code
     ]);
 
   home-manager.users.${username}.programs = {
