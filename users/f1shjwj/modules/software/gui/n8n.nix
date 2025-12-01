@@ -2,10 +2,11 @@
 {
   services.n8n = {
     enable = true;
-    webhookUrl = "https://n8n.483917.xyz";
+    environment = {
+      WEBHOOK_URL = "https://n8n.483917.xyz";
+      ALL_PROXY = "http://127.0.0.1:7890";
+    };
   };
-
-  systemd.services.n8n.environment.all_proxy = "http://127.0.0.1:7890";
 
   systemd.services.cloudflared-tunnel-n8n-tunnel.serviceConfig = {
     Restart = lib.mkForce "always";

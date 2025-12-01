@@ -3,8 +3,10 @@
   home-manager.users.${username}.programs = {
     git = {
       enable = true;
-      userName = "F1shjwj";
-      userEmail = "jwjawa@outlook.com";
+      settings.user = {
+        name = "F1shjwj";
+        email = "jwjawa@outlook.com";
+      };
     };
     lazygit = {
       enable = true;

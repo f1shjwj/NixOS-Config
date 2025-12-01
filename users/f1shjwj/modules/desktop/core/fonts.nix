@@ -21,7 +21,7 @@
     ]
     ++ [
       font-awesome_6
-      noto-fonts-emoji
+      noto-fonts-color-emoji
     ];
 
   fonts.fontconfig.defaultFonts = {
