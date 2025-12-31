@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   proxyPort = 7890;
-  localConfig = ./mihomo/nachoneko.yaml;
+  localConfig = ./mihomo/bajie.yaml;
 in
 {
   networking.proxy = {

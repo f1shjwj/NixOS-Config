@@ -31,6 +31,7 @@
       peazip
       # resilio-sync
       # ventoy
+      zotero
     ])
     ++ (with pkgs-unstable; [
       cherry-studio

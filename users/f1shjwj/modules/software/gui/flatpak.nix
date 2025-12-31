@@ -12,6 +12,8 @@ let
     "com.tencent.WeChat"
     "com.tencent.wemeet"
     "com.baidu.NetDisk"
+    "com.usebottles.bottles"
+    "org.freedesktop.Platform.VulkanLayer.MangoHud"
   ];
 in
 {
