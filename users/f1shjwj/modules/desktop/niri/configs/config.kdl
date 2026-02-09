@@ -25,6 +25,10 @@ output "eDP-1" {
     // off
     variable-refresh-rate on-demand=true
 }
+output "HDMI-A-1" {
+    // off
+    mode "1920x1080@99.997"
+}
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
@@ -87,6 +91,15 @@ window-rule {
     match app-id="QQ"
     match app-id="wechat"
     default-column-width { proportion 0.5; }
+}
+window-rule {
+    match app-id="steam" title="^notification.*"
+    open-focused false
+}
+window-rule {
+    // Bottles Endfield
+    match app-id="steam_proton" title="Form"
+    open-floating true
 }
 
 binds {

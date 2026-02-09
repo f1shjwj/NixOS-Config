@@ -14,6 +14,8 @@ let
     "com.baidu.NetDisk"
     "com.usebottles.bottles"
     "org.freedesktop.Platform.VulkanLayer.MangoHud"
+    "com.vysp3r.ProtonPlus"
+    "org.freedesktop.Platform.VulkanLayer.vkBasalt"
   ];
 in
 {

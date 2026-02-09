@@ -41,7 +41,7 @@
     ./modules/software/gui/obs-studio.nix
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix
-    ./modules/software/gui/n8n.nix
+    # ./modules/software/gui/n8n.nix
     ./modules/software/gui/vicinae.nix
 
     ./modules/system/i2c.nix
