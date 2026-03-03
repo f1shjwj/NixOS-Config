@@ -2,6 +2,7 @@
 {
   users.users.${username}.packages = with pkgs; [
     wpsoffice-cn
+    onlyoffice-desktopeditors
   ];
 
   fonts.packages = with pkgs; [
