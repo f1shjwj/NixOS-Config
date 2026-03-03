@@ -1,6 +1,9 @@
 { username, pkgs, ... }:
 {
   programs.niri.enable = true;
+  programs.niri.package = pkgs.niri.overrideAttrs (old: {
+    patches = old.patches ++ [ ./tag_support-shm-sharing_2.patch ];
+  });
 
   users.users.${username}.packages = with pkgs; [
     xwayland-satellite
