@@ -13,6 +13,7 @@ in
       "users"
       "wheel"
       "input"
+      "podman"
     ];
     shell = "/run/current-system/sw/bin/bash";
     hashedPasswordFile = "/etc/nixos/.passwd/${username}";
