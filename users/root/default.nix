@@ -4,6 +4,6 @@
   environment.variables.EDITOR = "vim";
 
   users.users.root = {
-    hashedPasswordFile = "/etc/nixos/.passwd/root";
+    hashedPasswordFile = "/etc/nixos/.secret/passwd/root";
   };
 }

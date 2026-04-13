@@ -16,7 +16,7 @@ in
       "podman"
     ];
     shell = "/run/current-system/sw/bin/bash";
-    hashedPasswordFile = "/etc/nixos/.passwd/${username}";
+    hashedPasswordFile = "/etc/nixos/.secret/passwd/${username}";
   };
 
   home-manager.users.${username} = {
