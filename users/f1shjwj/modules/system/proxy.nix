@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   proxyPort = 7890;
-  localConfig = ./mihomo/bajie.yaml;
+  localConfig = "/etc/nixos/.secret/mihomo/config.yaml";
 in
 {
   networking.proxy = {
