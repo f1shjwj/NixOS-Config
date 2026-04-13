@@ -37,6 +37,7 @@
       gemini-cli
       codex
       claude-code
+      mcp-nixos
     ]);
 
   home-manager.users.${username}.programs = {
