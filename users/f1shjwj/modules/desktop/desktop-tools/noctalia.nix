@@ -1,21 +1,6 @@
+{ pkgs-unstable, username, ... }:
 {
-  pkgs,
-  inputs,
-  username,
-  ...
-}:
-{
-  users.users.${username}.packages = with pkgs; [
-    inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
-  ];
-
-  home-manager.users.${username} = {
-    imports = [ inputs.noctalia.homeModules.default ];
-    programs.noctalia-shell = {
-      enable = true;
-      systemd.enable = true;
-    };
-  };
+  users.users.${username}.packages = with pkgs-unstable; [ noctalia-shell ];
 
   services.upower.enable = true;
 }

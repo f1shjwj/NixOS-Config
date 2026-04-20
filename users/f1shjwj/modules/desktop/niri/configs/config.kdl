@@ -57,6 +57,7 @@ layout {
     struts { }
 }
 
+spawn-at-startup "noctalia-shell"
 spawn-at-startup "soteria"
 
 hotkey-overlay { skip-at-startup; }
