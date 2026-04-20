@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   username,
   ...
 }:
@@ -10,12 +9,12 @@
     type = "fcitx5";
     fcitx5 = {
       waylandFrontend = true;
-      addons = [
-        pkgs.qt6Packages.fcitx5-chinese-addons
-        pkgs.fcitx5-gtk
-        pkgs-unstable.fcitx5-pinyin-zhwiki
-        pkgs-unstable.fcitx5-pinyin-moegirl
-        pkgs-unstable.fcitx5-pinyin-minecraft
+      addons = with pkgs; [
+        qt6Packages.fcitx5-chinese-addons
+        fcitx5-gtk
+        fcitx5-pinyin-zhwiki
+        fcitx5-pinyin-moegirl
+        fcitx5-pinyin-minecraft
       ];
     };
   };
@@ -26,7 +25,7 @@
 
   home-manager.users.${username}.gtk = {
     gtk2.extraConfig = ''gtk-im-module="fcitx"'';
-    gtk3.extraConfig.gtk-im-module = ''fcitx'';
-    gtk4.extraConfig.gtk-im-module = ''fcitx'';
+    gtk3.extraConfig.gtk-im-module = "fcitx";
+    gtk4.extraConfig.gtk-im-module = "fcitx";
   };
 }

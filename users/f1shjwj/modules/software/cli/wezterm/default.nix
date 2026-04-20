@@ -1,10 +1,9 @@
-{ username, pkgs-unstable, ... }:
+{ username, ... }:
 {
   home-manager.users.${username} = {
     home.sessionVariables.WEZTERM_CONFIG_FILE = "/home/${username}/.config/wezterm/wezterm.lua";
     programs.wezterm = {
       enable = true;
-      package = pkgs-unstable.wezterm;
       extraConfig = builtins.readFile ./wezterm.lua;
       colorSchemes.jwj-theme = {
         background = "#1e1e1e";

@@ -1,6 +1,6 @@
-{ pkgs-unstable, username, ... }:
+{ pkgs, username, ... }:
 {
-  users.users.${username}.packages = with pkgs-unstable; [ noctalia-shell ];
+  users.users.${username}.packages = with pkgs; [ noctalia-shell ];
 
   services.upower.enable = true;
 }
