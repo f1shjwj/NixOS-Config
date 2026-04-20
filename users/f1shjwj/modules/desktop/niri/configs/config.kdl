@@ -59,6 +59,8 @@ layout {
 
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "soteria"
+spawn-at-startup "flatpak" "run" "com.qq.QQ"
+spawn-at-startup "flatpak" "run" "com.tencent.WeChat"
 
 hotkey-overlay { skip-at-startup; }
 

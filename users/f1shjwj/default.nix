@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   username = "f1shjwj";
 in
@@ -15,7 +16,7 @@ in
       "input"
       "podman"
     ];
-    shell = "/run/current-system/sw/bin/bash";
+    shell = pkgs.bashInteractive;
     hashedPasswordFile = "/etc/nixos/.secret/passwd/${username}";
   };
 

@@ -11,7 +11,7 @@
     ./modules/desktop/core/qt.nix
     ./modules/desktop/core/xdg.nix
     ./modules/desktop/core/cursor.nix
-    ./modules/desktop/core/xresources-properties.nix
+    # ./modules/desktop/core/xresources-properties.nix
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/noctalia.nix
@@ -32,7 +32,7 @@
     ./modules/software/cli/git.nix
     ./modules/software/cli/shell
     ./modules/software/cli/shell/dir_colors
-    ./modules/software/cli/cloudflared.nix
+    # ./modules/software/cli/cloudflared.nix
     ./modules/software/gui
     ./modules/software/gui/vscode.nix
     ./modules/software/gui/browser.nix

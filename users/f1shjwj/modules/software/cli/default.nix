@@ -30,6 +30,9 @@
     pandoc
     imagemagick
     ncdu
+    dig
+    ripgrep
+    jq
 
     gemini-cli
     codex
