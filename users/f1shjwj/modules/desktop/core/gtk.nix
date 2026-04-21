@@ -7,6 +7,10 @@
       name = "Orchis-Dark";
       package = pkgs.orchis-theme;
     };
+    gtk4.theme = {
+      name = "Orchis-Dark";
+      package = pkgs.orchis-theme;
+    };
     iconTheme = {
       name = "Tela-blue-dark";
       package = pkgs.tela-icon-theme;

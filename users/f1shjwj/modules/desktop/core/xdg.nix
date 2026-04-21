@@ -38,7 +38,10 @@
 
   home-manager.users.${username} = {
     xdg = {
-      userDirs.enable = true;
+      userDirs = {
+        enable = true;
+        setSessionVariables = true;
+      };
       autostart.enable = true;
       # TODO: mime
     };

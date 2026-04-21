@@ -43,6 +43,7 @@
   home-manager.users.${username}.programs = {
     yazi = {
       enable = true;
+      shellWrapperName = "yy";
     };
 
     direnv = {
