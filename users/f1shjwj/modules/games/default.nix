@@ -18,7 +18,7 @@
   nixpkgs.overlays = [ inputs.prismlauncher-cracked.overlays.default ];
 
   users.users.${username}.packages = with pkgs; [
-    lutris
+    # lutris
     techmino
     prismlauncher
   ];

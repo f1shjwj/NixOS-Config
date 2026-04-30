@@ -2,7 +2,7 @@
 {
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri.overrideAttrs (old: {
-    patches = old.patches ++ [ ./tag_support-shm-sharing_2.patch ];
+    patches = old.patches ++ [ ./tag_support-shm-sharing_4.patch ];
   });
 
   users.users.${username}.packages = with pkgs; [

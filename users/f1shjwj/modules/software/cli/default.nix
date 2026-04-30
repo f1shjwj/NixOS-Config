@@ -33,11 +33,12 @@
     dig
     ripgrep
     jq
+    tmux # TODO: module
 
     gemini-cli
     codex
     claude-code
-    mcp-nixos
+    # mcp-nixos
   ];
 
   home-manager.users.${username}.programs = {
