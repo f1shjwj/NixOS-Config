@@ -10,12 +10,12 @@ let
     "com.github.tchx84.Flatseal"
     "com.qq.QQ"
     "com.tencent.WeChat"
-    "com.tencent.wemeet"
+    # "com.tencent.wemeet"
     "com.baidu.NetDisk"
     "com.usebottles.bottles"
-    "org.freedesktop.Platform.VulkanLayer.MangoHud"
+    "runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
     "com.vysp3r.ProtonPlus"
-    "org.freedesktop.Platform.VulkanLayer.vkBasalt"
+    "runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08"
   ];
 in
 {
