@@ -15,6 +15,7 @@
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/noctalia.nix
+    ./modules/desktop/desktop-tools/gnome-files.nix
     # ./modules/desktop/desktop-tools/waybar
     # ./modules/desktop/desktop-tools/swayidle.nix
     # ./modules/desktop/desktop-tools/gtklock.nix
@@ -37,7 +38,6 @@
     ./modules/software/gui/vscode.nix
     ./modules/software/gui/browser.nix
     ./modules/software/gui/flatpak.nix
-    ./modules/software/gui/thunar.nix
     ./modules/software/gui/obs-studio.nix
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix

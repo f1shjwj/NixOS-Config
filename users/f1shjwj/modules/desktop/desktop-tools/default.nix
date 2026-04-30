@@ -16,7 +16,6 @@
       cliphist.enable = true;
       udiskie.enable = true;
       network-manager-applet.enable = true;
-      blueman-applet.enable = true;
       mpris-proxy.enable = true;
     };
   };

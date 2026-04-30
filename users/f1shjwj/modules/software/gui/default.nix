@@ -22,11 +22,9 @@
     foliate
     keepassxc
     qbittorrent
-    mousepad
     mission-center
     # gimp3
     # rustdesk
-    peazip
     # resilio-sync
     # ventoy
     zotero

@@ -90,6 +90,7 @@ window-rule {
 }
 window-rule {
     match app-id="org.wezfurlong.wezterm"
+    match app-id="org.gnome.Nautilus"
     match app-id="org.telegram.desktop"
     match app-id="QQ"
     match app-id="wechat"
@@ -109,7 +110,7 @@ binds {
     Mod+Slash   repeat=false { show-hotkey-overlay; }
 
     Mod+Grave   { spawn "wezterm"; }
-    Mod+E       { spawn "thunar"; }
+    Mod+E       { spawn "nautilus"; }
     
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
     Mod+V       repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
