@@ -1,30 +1,25 @@
 { username, pkgs, ... }:
 let
-  lockCommand = "${pkgs.systemd}/bin/loginctl lock-session";
-  gtklockCommand = "${pkgs.gtklock}/bin/gtklock";
-  niriCommand = "${pkgs.niri}/bin/niri msg action power-off-monitors";
+  lockCommand = "lock-screen";
+  screenOffCommand = "${pkgs.niri}/bin/niri msg action power-off-monitors";
+  screenOnCommand = "${pkgs.niri}/bin/niri msg action power-on-monitors";
 in
 {
   home-manager.users.${username}.services.swayidle = {
     enable = true;
-    events = [
-      {
-        event = "lock";
-        command = gtklockCommand;
-      }
-      {
-        event = "before-sleep";
-        command = lockCommand;
-      }
-    ];
+    events = {
+      lock = lockCommand;
+      before-sleep = lockCommand;
+    };
     timeouts = [
       {
         timeout = 600;
-        command = niriCommand;
+        command = lockCommand;
       }
       {
-        timeout = 610;
-        command = lockCommand;
+        timeout = 660;
+        command = screenOffCommand;
+        resumeCommand = screenOnCommand;
       }
     ];
   };

@@ -16,8 +16,9 @@
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/noctalia.nix
     ./modules/desktop/desktop-tools/gnome-files.nix
+    ./modules/desktop/desktop-tools/swaylock.nix
     # ./modules/desktop/desktop-tools/waybar
-    # ./modules/desktop/desktop-tools/swayidle.nix
+    ./modules/desktop/desktop-tools/swayidle.nix
     # ./modules/desktop/desktop-tools/gtklock.nix
     ./modules/desktop/desktop-tools/polkit.nix
     # ./modules/desktop/desktop-tools/kanshi.nix
