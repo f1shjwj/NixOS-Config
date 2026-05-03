@@ -16,5 +16,8 @@
     };
   };
 
-  users.users.${username}.packages = with pkgs; [ chromium ];
+  users.users.${username}.packages = with pkgs; [
+    chromium
+    qutebrowser
+  ];
 }

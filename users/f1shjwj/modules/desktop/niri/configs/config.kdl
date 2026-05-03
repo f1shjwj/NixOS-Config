@@ -112,7 +112,8 @@ binds {
     Mod+E       { spawn "nautilus"; }
     
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
-    Mod+V       repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
+    Mod+V       repeat=false { spawn "vicinae" "vicinae://launch/clipboard/history"; }
+    Mod+T       repeat=false { spawn "vicinae" "vicinae://launch/system/run"; }
     Mod+S       repeat=false { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+P       repeat=false { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Super+Alt+L repeat=false { spawn "lock-screen"; }
