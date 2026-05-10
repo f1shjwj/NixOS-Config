@@ -28,6 +28,7 @@
     # ./modules/virtual/waydroid.nix
 
     ./modules/software/cli
+    ./modules/software/cli/ai.nix
     ./modules/software/cli/wezterm
     ./modules/software/cli/btop
     ./modules/software/cli/fastfetch
