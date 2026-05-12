@@ -16,6 +16,7 @@ let
     "runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/25.08"
     "com.vysp3r.ProtonPlus"
     "runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08"
+    "com.github.k4zmu2a.spacecadetpinball"
   ];
 in
 {
