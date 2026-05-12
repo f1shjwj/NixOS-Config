@@ -58,6 +58,7 @@
           "image/tiff" = [ "org.gnome.Loupe.desktop" ];
           "image/webp" = [ "org.gnome.Loupe.desktop" ];
           "text/html" = [ "zen-beta.desktop" ];
+          "text/markdown" = [ "litemdview.desktop" ];
           "text/plain" = [ "org.gnome.TextEditor.desktop" ];
           "text/x-python" = [ "code.desktop" ];
           "x-scheme-handler/chrome" = [ "zen-beta.desktop" ];

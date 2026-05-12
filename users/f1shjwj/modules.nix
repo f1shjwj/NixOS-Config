@@ -46,6 +46,7 @@
     # ./modules/software/gui/n8n.nix
     ./modules/software/gui/vicinae.nix
     ./modules/software/gui/zed.nix
+    ./modules/software/gui/litemdview.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix
