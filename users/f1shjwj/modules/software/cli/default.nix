@@ -8,7 +8,6 @@
     # 开发工具
     neovim # TODO
     gnumake
-    devenv
 
     # Nix 相关工具
     nh
@@ -38,15 +37,8 @@
     # mcp-nixos
   ];
 
-  home-manager.users.${username}.programs = {
-    yazi = {
-      enable = true;
-      shellWrapperName = "yy";
-    };
-
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
+  home-manager.users.${username}.programs.yazi = {
+    enable = true;
+    shellWrapperName = "yy";
   };
 }

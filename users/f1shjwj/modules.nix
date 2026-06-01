@@ -15,6 +15,7 @@
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/noctalia.nix
+    ./modules/desktop/desktop-tools/vicinae.nix
     ./modules/desktop/desktop-tools/gnome-files.nix
     ./modules/desktop/desktop-tools/swaylock.nix
     # ./modules/desktop/desktop-tools/waybar
@@ -28,6 +29,7 @@
     # ./modules/virtual/waydroid.nix
 
     ./modules/software/cli
+    ./modules/software/cli/devenv.nix
     ./modules/software/cli/ai.nix
     ./modules/software/cli/wezterm
     ./modules/software/cli/btop
@@ -44,7 +46,6 @@
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix
     # ./modules/software/gui/n8n.nix
-    ./modules/software/gui/vicinae.nix
     ./modules/software/gui/zed.nix
     ./modules/software/gui/litemdview.nix
 

@@ -57,6 +57,7 @@ layout {
     struts { }
 }
 
+spawn-at-startup "sh" "-c" "USE_LAYER_SHELL=1 exec vicinae server"
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "flatpak" "run" "com.qq.QQ"
 spawn-at-startup "flatpak" "run" "com.tencent.WeChat"

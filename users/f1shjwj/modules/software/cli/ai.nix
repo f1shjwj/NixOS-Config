@@ -11,6 +11,6 @@ in
   users.users.${username}.packages = with llm-agents; [
     claude-code
     codex
-    gemini-cli
+    # gemini-cli
   ];
 }
