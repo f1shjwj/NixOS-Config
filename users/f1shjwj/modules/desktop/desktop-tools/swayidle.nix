@@ -1,6 +1,6 @@
 { username, pkgs, ... }:
 let
-  lockCommand = "${pkgs.swaylock-effects}/bin/swaylock";
+  lockCommand = "${pkgs.swaylock-effects}/bin/swaylock &";
   screenOffCommand = "${pkgs.niri}/bin/niri msg action power-off-monitors";
   screenOnCommand = "${pkgs.niri}/bin/niri msg action power-on-monitors";
 in

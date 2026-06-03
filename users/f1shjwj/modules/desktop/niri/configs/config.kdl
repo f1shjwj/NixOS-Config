@@ -117,7 +117,7 @@ binds {
     Mod+T       repeat=false { spawn "vicinae" "vicinae://launch/system/run"; }
     Mod+S       repeat=false { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
     Mod+P       repeat=false { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
-    Super+Alt+L repeat=false { spawn "lock-screen"; }
+    Super+Alt+L repeat=false { spawn "swaylock"; }
     Mod+Shift+Period { spawn "missioncenter"; }
 
     XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }

@@ -1,23 +1,9 @@
 { username, pkgs, ... }:
-let
-  lockCommand = pkgs.writeShellScriptBin "lock-screen" ''
-    lock_file="''${XDG_RUNTIME_DIR:-/tmp}/lock-screen.lock"
-
-    exec 9>"$lock_file"
-    if ! ${pkgs.util-linux}/bin/flock -n 9; then
-      exit 0
-    fi
-
-    export LC_TIME=C.UTF-8
-    exec ${pkgs.swaylock-effects}/bin/swaylock "$@"
-  '';
-in
 {
   security.pam.services.swaylock = { };
 
-  users.users.${username}.packages = with pkgs; [
-    lockCommand
-    swaylock-effects
+  users.users.${username}.packages = [
+    pkgs.swaylock-effects
   ];
 
   home-manager.users.${username}.xdg.configFile."swaylock/config".text = ''
