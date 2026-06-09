@@ -10,11 +10,8 @@
     fcitx5 = {
       waylandFrontend = true;
       addons = with pkgs; [
-        qt6Packages.fcitx5-chinese-addons
+        fcitx5-rime
         fcitx5-gtk
-        fcitx5-pinyin-zhwiki
-        fcitx5-pinyin-moegirl
-        fcitx5-pinyin-minecraft
       ];
     };
   };
