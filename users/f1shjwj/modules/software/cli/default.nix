@@ -33,8 +33,6 @@
     ripgrep
     jq
     tmux # TODO: module
-
-    # mcp-nixos
   ];
 
   home-manager.users.${username}.programs.yazi = {
