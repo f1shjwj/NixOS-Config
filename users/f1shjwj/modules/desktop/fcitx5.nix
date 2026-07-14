@@ -16,9 +16,9 @@
     };
   };
 
-  environment.sessionVariables = {
-    QT_IM_MODULE = "fcitx";
-  };
+  # environment.sessionVariables = {
+  #   QT_IM_MODULE = "fcitx";
+  # };
 
   home-manager.users.${username}.gtk = {
     gtk2.extraConfig = ''gtk-im-module="fcitx"'';

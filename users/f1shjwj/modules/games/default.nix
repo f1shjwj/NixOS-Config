@@ -36,5 +36,6 @@
     # lutris
     techmino
     prismlauncher
+    jdk25
   ];
 }
