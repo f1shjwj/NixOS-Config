@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./mcp
+    ./hermes.nix
   ];
 
   users.users.${username}.packages = with llm-agents; [

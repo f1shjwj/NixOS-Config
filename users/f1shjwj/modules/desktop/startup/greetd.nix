@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  programs.regreet = {
+  services.displayManager.regreet = {
     enable = true;
     cageArgs = [
       "-s"

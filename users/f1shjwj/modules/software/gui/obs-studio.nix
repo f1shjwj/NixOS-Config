@@ -1,8 +1,14 @@
-{ username, config, ... }:
+{
+  username,
+  config,
+  pkgs,
+  ...
+}:
 {
   programs.obs-studio = {
     enable = true;
     enableVirtualCamera = true;
+    plugins = [ pkgs.obs-studio-plugins.obs-pipewire-audio-capture ];
   };
 
   users.groups.video.members = [ username ];
