@@ -18,5 +18,7 @@ in
     codex
     opencode
     # gemini-cli
+    omp
+    herdr
   ];
 }

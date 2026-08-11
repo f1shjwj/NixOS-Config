@@ -1,1 +1,6 @@
-{ security.soteria.enable = true; }
+{
+  security.polkit = {
+    enablePkexecWrapper = true;
+  };
+  security.soteria.enable = true;
+}

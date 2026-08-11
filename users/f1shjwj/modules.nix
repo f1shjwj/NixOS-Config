@@ -1,7 +1,6 @@
 {
   imports = [
     ./modules/desktop/niri
-    ./modules/desktop/niri/autostart.nix
     ./modules/desktop/fcitx5.nix
     ./modules/desktop/startup/greetd.nix
     ./modules/desktop/startup/grub2-themes.nix
@@ -11,7 +10,6 @@
     ./modules/desktop/core/qt.nix
     ./modules/desktop/core/xdg.nix
     ./modules/desktop/core/cursor.nix
-    # ./modules/desktop/core/xresources-properties.nix
     ./modules/desktop/core/fonts.nix
     ./modules/desktop/desktop-tools
     ./modules/desktop/desktop-tools/noctalia.nix
@@ -19,15 +17,11 @@
     ./modules/desktop/desktop-tools/gnome-files.nix
     ./modules/desktop/desktop-tools/swaylock-overlay.nix
     ./modules/desktop/desktop-tools/swaylock.nix
-    # ./modules/desktop/desktop-tools/waybar
     ./modules/desktop/desktop-tools/swayidle.nix
-    # ./modules/desktop/desktop-tools/gtklock.nix
     ./modules/desktop/desktop-tools/polkit.nix
     # ./modules/desktop/desktop-tools/kanshi.nix
 
     ./modules/virtual/docker.nix
-    # ./modules/virtual/virtualbox.nix
-    # ./modules/virtual/waydroid.nix
 
     ./modules/software/cli
     ./modules/software/cli/devenv.nix
