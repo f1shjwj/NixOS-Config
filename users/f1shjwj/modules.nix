@@ -22,6 +22,7 @@
     # ./modules/desktop/desktop-tools/kanshi.nix
 
     ./modules/virtual/docker.nix
+    ./modules/virtual/win11/libvirt.nix
 
     ./modules/software/cli
     ./modules/software/cli/devenv.nix
