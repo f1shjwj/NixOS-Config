@@ -52,7 +52,7 @@
       # 独立脚本 ./win11.sh + writeShellApplication（runtimeInputs 注入依赖 PATH）
       (pkgs.writeShellApplication {
         name = "win11";
-        runtimeInputs = [ pkgs.virt-viewer pkgs.libvirt pkgs.util-linux ];
+        runtimeInputs = [ pkgs.virt-viewer pkgs.libvirt pkgs.util-linux pkgs.iproute2 ];
         text = builtins.readFile ./win11.sh;
       })
     ];
