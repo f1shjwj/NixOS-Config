@@ -23,6 +23,7 @@ in
     # follow
     telegram-desktop
     # feishu
+    piliplus
 
     # 通用
     mpv
@@ -31,7 +32,8 @@ in
     keepassxc
     qbittorrent
     mission-center
-    # gimp3
+    gimp3
+    inkscape
     # rustdesk
     # resilio-sync
     # ventoy

@@ -38,12 +38,15 @@
     ./modules/software/gui/vscode.nix
     ./modules/software/gui/browser.nix
     ./modules/software/gui/flatpak.nix
+    ./modules/software/cli/lofi
     ./modules/software/gui/obs-studio.nix
     ./modules/software/gui/wine.nix
     ./modules/software/gui/office.nix
     # ./modules/software/gui/n8n.nix
     ./modules/software/gui/zed.nix
     ./modules/software/gui/litemdview.nix
+
+    ./modules/services/vikunja.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix

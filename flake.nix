@@ -22,6 +22,7 @@
       url = "github:Diegiwg/PrismLauncher-Cracked";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    fcitx5-vinput.url = "github:xifan2333/fcitx5-vinput/v2.3.8";
   };
 
   outputs =
@@ -43,11 +44,13 @@
             substituters = [
               "https://mirrors.ustc.edu.cn/nix-channels/store"
               "https://nix-community.cachix.org"
-              "https://cache.numtide.com" # llm-agents (claude-code, codex)
+              "https://cache.numtide.com" # llm-agents
+              "https://fcitx5-vinput.cachix.org"
             ];
             trusted-public-keys = [
               "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
               "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+              "fcitx5-vinput.cachix.org-1:XpX3AA6+dDIX4qJhb1QM7sbTwX6/qSlGvW8Z5NK6XdU="
             ];
           };
         }

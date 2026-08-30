@@ -22,6 +22,7 @@
     nix-tree
     you-get
     shell-gpt # TODO: config
+    gh
     fzf
     wev
     tty-clock
