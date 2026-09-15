@@ -14,11 +14,13 @@ in
   ];
 
   users.users.${username}.packages = with llm-agents; [
-    claude-code
-    codex
-    opencode
+    # claude-code
+    # codex
+    # opencode
     # gemini-cli
+    pi
     omp
     herdr
+    dsh
   ];
 }

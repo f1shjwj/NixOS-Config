@@ -41,7 +41,7 @@ in
 
     drawio
 
-    cherry-studio
+    # cherry-studio
 
     wemeet-xwayland-shortcut
     libxdamage

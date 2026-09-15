@@ -47,6 +47,7 @@
     ./modules/software/gui/litemdview.nix
 
     ./modules/services/vikunja.nix
+    ./modules/services/forgejo.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix

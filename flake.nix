@@ -32,14 +32,11 @@
       ...
     }:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
       specialArgs = { inherit inputs; };
       nix-settings = [
         {
+          # nixpkgs.config.permittedInsecurePackages = [ "electron-40.10.5" ];
+          nixpkgs.config.allowUnfree = true;
           nix.settings = {
             substituters = [
               "https://mirrors.ustc.edu.cn/nix-channels/store"
@@ -71,7 +68,6 @@
     {
       nixosConfigurations = {
         "F1shjwj-Code01" = nixpkgs.lib.nixosSystem {
-          inherit pkgs;
           specialArgs = specialArgs;
           modules =
             nix-settings
