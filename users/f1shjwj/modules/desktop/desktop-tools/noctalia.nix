@@ -1,6 +1,9 @@
-{ pkgs, username, ... }:
+{ ... }:
 {
-  users.users.${username}.packages = with pkgs; [ noctalia-shell ];
+  programs.noctalia = {
+    enable = true;
+    systemd.enable = true;
+  };
 
   services.upower.enable = true;
 }

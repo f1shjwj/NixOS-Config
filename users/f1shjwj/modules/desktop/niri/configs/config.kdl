@@ -58,11 +58,16 @@ layout {
 }
 
 spawn-at-startup "sh" "-c" "USE_LAYER_SHELL=1 exec vicinae server"
-spawn-at-startup "noctalia-shell"
 spawn-at-startup "flatpak" "run" "com.qq.QQ"
 spawn-at-startup "flatpak" "run" "com.tencent.WeChat"
 
 hotkey-overlay { skip-at-startup; }
+
+// 让 Electron/Qt 应用(Discord/Telegram/QQ)点通知或托盘图标时能聚焦前置窗口
+// 默认 niri 忽略无效序列号的 xdg-activation 请求, 这些应用拿不到有效序列号
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -115,9 +120,9 @@ binds {
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
     Mod+V       repeat=false { spawn "vicinae" "vicinae://launch/clipboard/history"; }
     Mod+T       repeat=false { spawn "vicinae" "vicinae://launch/system/run"; }
-    Mod+S       repeat=false { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
-    Mod+P       repeat=false { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
-    Super+Alt+L repeat=false { spawn "swaylock"; }
+    Mod+S       repeat=false { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    Mod+P       repeat=false { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Super+Alt+L repeat=false { spawn "noctalia" "msg" "session" "lock"; }
     Mod+Shift+Period { spawn "missioncenter"; }
 
     XF86AudioRaiseVolume    allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
@@ -125,8 +130,8 @@ binds {
     XF86AudioMute           allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    XF86MonBrightnessUp     allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "increase"; }
-    XF86MonBrightnessDown   allow-when-locked=true { spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+    XF86MonBrightnessUp     allow-when-locked=true { spawn "noctalia" "msg" "brightness-up"; }
+    XF86MonBrightnessDown   allow-when-locked=true { spawn "noctalia" "msg" "brightness-down"; }
 
     XF86AudioNext   allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPause  allow-when-locked=true { spawn "playerctl" "play-pause"; }
@@ -239,9 +244,8 @@ binds {
 
     Mod+W { toggle-column-tabbed-display; }
 
-    Print       { screenshot; }
-    Ctrl+Print  { screenshot-screen; }
-    Alt+Print   { screenshot-window; }
+    Print       { spawn "noctalia" "msg" "screenshot-region"; }
+    Ctrl+Print  { spawn "noctalia" "msg" "screenshot-fullscreen"; }
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 

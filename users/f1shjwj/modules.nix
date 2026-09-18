@@ -15,9 +15,9 @@
     ./modules/desktop/desktop-tools/noctalia.nix
     ./modules/desktop/desktop-tools/vicinae.nix
     ./modules/desktop/desktop-tools/gnome-files.nix
-    ./modules/desktop/desktop-tools/swaylock-overlay.nix
-    ./modules/desktop/desktop-tools/swaylock.nix
-    ./modules/desktop/desktop-tools/swayidle.nix
+    # ./modules/desktop/desktop-tools/swaylock-overlay.nix
+    # ./modules/desktop/desktop-tools/swaylock.nix
+    # ./modules/desktop/desktop-tools/swayidle.nix
     ./modules/desktop/desktop-tools/polkit.nix
     # ./modules/desktop/desktop-tools/kanshi.nix
 
