@@ -73,6 +73,7 @@
             nix-settings
             ++ home-manager-module
             ++ nur-module
+            ++ [ ./temp ]
             ++ [ ./hosts/Code01 ]
             ++ [
               ./users/root
