@@ -104,9 +104,10 @@ window-rule {
 window-rule {
     match app-id="steam" title="^notification.*"
     open-focused false
+    default-floating-position x=20 y=8 relative-to="bottom-right"
 }
+// Bottles Endfield
 window-rule {
-    // Bottles Endfield
     match app-id="steam_proton" title="Form"
     open-floating true
 }
