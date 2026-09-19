@@ -48,6 +48,7 @@
 
     ./modules/services/vikunja.nix
     ./modules/services/forgejo.nix
+    ./modules/services/hermes.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix
