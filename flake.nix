@@ -23,6 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     fcitx5-vinput.url = "github:xifan2333/fcitx5-vinput/v2.3.8";
+    tg2qq = {
+      url = "git+file:///home/f1shjwj/Codespace/tg2qq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

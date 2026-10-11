@@ -37,7 +37,7 @@ in
     # rustdesk
     # resilio-sync
     # ventoy
-    zotero
+    # zotero
 
     drawio
 

@@ -17,6 +17,7 @@ let
     "com.vysp3r.ProtonPlus"
     "runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/25.08"
     "com.github.k4zmu2a.spacecadetpinball"
+    "eu.betterbird.Betterbird"
   ];
 in
 {

@@ -5,5 +5,9 @@
     systemd.enable = true;
   };
 
-  services.upower.enable = true;
+  services.upower = {
+    enable = true;
+    percentageAction = 2;
+    criticalPowerAction = "PowerOff";
+  };
 }

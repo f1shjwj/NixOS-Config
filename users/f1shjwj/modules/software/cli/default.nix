@@ -34,6 +34,9 @@
     ripgrep
     jq
     tmux # TODO: module
+
+    android-tools
+    scrcpy
   ];
 
   home-manager.users.${username}.programs.yazi = {

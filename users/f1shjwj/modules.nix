@@ -49,6 +49,8 @@
     ./modules/services/vikunja.nix
     ./modules/services/forgejo.nix
     ./modules/services/hermes.nix
+    ./modules/services/cybergroupmate.nix
+    ./modules/services/tg2qq.nix
 
     ./modules/system/i2c.nix
     ./modules/system/cups-pdf.nix
