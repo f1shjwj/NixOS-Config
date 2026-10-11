@@ -20,6 +20,6 @@ in
     pi
     omp
     herdr
-    dsh
+    # dsh
   ];
 }

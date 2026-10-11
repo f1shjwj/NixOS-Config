@@ -14,6 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
+    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix/569c299a16093d5fc65ed53f7af6b8d831a98f07";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,11 +48,13 @@
               "https://nix-community.cachix.org"
               "https://cache.numtide.com" # llm-agents
               "https://fcitx5-vinput.cachix.org"
+              "https://deepseek-harness-nix.cachix.org"
             ];
             trusted-public-keys = [
               "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
               "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
               "fcitx5-vinput.cachix.org-1:XpX3AA6+dDIX4qJhb1QM7sbTwX6/qSlGvW8Z5NK6XdU="
+              "deepseek-harness-nix.cachix.org-1:5NrkwLN9veNMhiINtU5ZeV4isXFhFsOwn6Ms7J1M+TA="
             ];
           };
         }

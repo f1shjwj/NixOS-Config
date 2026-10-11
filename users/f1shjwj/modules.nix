@@ -27,6 +27,7 @@
     ./modules/software/cli
     ./modules/software/cli/devenv.nix
     ./modules/software/cli/ai
+    ./modules/software/cli/ai/dsh.nix
     ./modules/software/cli/wezterm
     ./modules/software/cli/btop
     ./modules/software/cli/fastfetch
