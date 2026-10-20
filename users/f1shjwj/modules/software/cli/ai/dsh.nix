@@ -1,14 +1,17 @@
 { inputs, pkgs, ... }:
+let
+  dshPackages = inputs.deepseek-harness.packages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   imports = [ inputs.deepseek-harness.nixosModules.default ];
 
   programs.dsh = {
     enable = true;
-    package = inputs.deepseek-harness.packages.${pkgs.system}.dsh;
+    package = dshPackages.dsh;
 
     desktop = {
       enable = true;
-      package = inputs.deepseek-harness.packages.${pkgs.system}.dsh-desktop-official;
+      package = dshPackages.dsh-desktop-official;
     };
   };
 }

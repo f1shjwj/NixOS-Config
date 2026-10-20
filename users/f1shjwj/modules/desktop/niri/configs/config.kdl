@@ -119,6 +119,7 @@ binds {
     Mod+E       { spawn "nautilus"; }
     
     Mod+Space   repeat=false { spawn "vicinae" "toggle"; }
+    Mod+Tab     repeat=false { spawn "vicinae" "vicinae://launch/wm/switch-windows"; }
     Mod+V       repeat=false { spawn "vicinae" "vicinae://launch/clipboard/history"; }
     Mod+T       repeat=false { spawn "vicinae" "vicinae://launch/system/run"; }
     Mod+S       repeat=false { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
@@ -215,8 +216,6 @@ binds {
     Mod+Ctrl+7 { move-column-to-workspace 7; }
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
-
-    // Mod+Tab { focus-workspace-previous; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }

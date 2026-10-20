@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
-    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix/569c299a16093d5fc65ed53f7af6b8d831a98f07";
+    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix/bbb7168aff1aeafee162ab5ecde3c9c92afe0240";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
