@@ -44,5 +44,6 @@ x-scheme-handler/https=zen-beta.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/dsh=deepseek-ai-dsh-desktop.desktop
+x-scheme-handler/ton=org.telegram.desktop.desktop
 
 [Removed Associations]
