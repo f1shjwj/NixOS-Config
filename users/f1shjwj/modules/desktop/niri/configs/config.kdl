@@ -28,6 +28,7 @@ output "eDP-1" {
 output "HDMI-A-1" {
     // off
     mode "1920x1080@99.997"
+    variable-refresh-rate on-demand=true
 }
 
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -63,8 +64,7 @@ spawn-at-startup "flatpak" "run" "com.tencent.WeChat"
 
 hotkey-overlay { skip-at-startup; }
 
-// 让 Electron/Qt 应用(Discord/Telegram/QQ)点通知或托盘图标时能聚焦前置窗口
-// 默认 niri 忽略无效序列号的 xdg-activation 请求, 这些应用拿不到有效序列号
+// 修 Electron/Qt 应用通知/托盘点不开窗口
 debug {
     honor-xdg-activation-with-invalid-serial
 }
@@ -110,6 +110,11 @@ window-rule {
 window-rule {
     match app-id="steam_proton" title="Form"
     open-floating true
+}
+// 为了终末地帧率更加稳定
+window-rule {
+    match app-id="steam_proton"
+    variable-refresh-rate true
 }
 
 binds {

@@ -51,10 +51,18 @@
                "/etc/profiles/per-user/f1shjwj/share/applications",
                "/run/current-system/sw/share/applications"
             ]
+         },
+         "entrypoints": {
+            "stronghold-protocol": {
+               "alias": "wsxy"
+            }
          }
       },
       "core": {
          "entrypoints": {
+            "refresh-apps": {
+               "alias": "refresh"
+            },
             "sponsor": {
                "enabled": false
             }

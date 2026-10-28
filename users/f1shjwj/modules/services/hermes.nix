@@ -12,8 +12,7 @@
     serviceConfig = {
       Type = "oneshot";
       RemainAfterExit = true;
-      # 容器崩溃由 compose 的 restart: unless-stopped 自动重启；
-      # gateway 内部还有重连观察器 + s6 监督，网络短暂不可用可自愈
+      # 容器由 compose 自动重启，网络抖动可自愈
       ExecStart = "${pkgs.podman-compose}/bin/podman-compose -f /home/f1shjwj/Codespace/hermes/compose.yaml up -d";
       ExecStop = "${pkgs.podman-compose}/bin/podman-compose -f /home/f1shjwj/Codespace/hermes/compose.yaml down";
       TimeoutStartSec = 300;

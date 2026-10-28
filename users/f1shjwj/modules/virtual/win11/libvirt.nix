@@ -12,6 +12,8 @@
   systemd.user.services.spice-vdagentd = {
     description = "SPICE vdagent daemon (clipboard bridge)";
     wantedBy = [ "default.target" ];
+    # 只在本用户下启动，greeter 侧跳过
+    unitConfig.ConditionUser = username;
     serviceConfig = {
       Type = "simple";
       RuntimeDirectory = "spice-vdagentd"; # 自动创建 %t/spice-vdagentd
@@ -20,11 +22,11 @@
     };
   };
 
-  # 声明式 VM 定义：登录时幂等 define（同名覆盖），XML 源文件在 flake 内
-  # 删除本服务 + XML 后，手动 `virsh undefine F1shjwj-Win11` 清理
+  # 登录时幂等 define；删服务后手动 virsh undefine
   systemd.user.services.libvirt-define-win11 = {
     description = "Declarative define of F1shjwj-Win11 VM";
     wantedBy = [ "default.target" ];
+    unitConfig.ConditionUser = username;
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.libvirt}/bin/virsh -c qemu:///session define ${./F1shjwj-Win11.xml}";
@@ -48,8 +50,7 @@
       virt-manager # GUI 管理
       virt-viewer # SPICE 显示客户端
       virtio-win # Windows virtio 驱动 ISO
-      # win11 命令族：server（VM 生命周期）+ view（SPICE 显示）
-      # 独立脚本 ./win11.sh + writeShellApplication（runtimeInputs 注入依赖 PATH）
+      # win11 命令：server 管生命周期，view 看 SPICE
       (pkgs.writeShellApplication {
         name = "win11";
         runtimeInputs = [ pkgs.virt-viewer pkgs.libvirt pkgs.util-linux pkgs.iproute2 ];

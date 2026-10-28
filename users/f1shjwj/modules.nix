@@ -50,7 +50,6 @@
     ./modules/services/vikunja.nix
     ./modules/services/forgejo.nix
     ./modules/services/hermes.nix
-    ./modules/services/cybergroupmate.nix
     ./modules/services/tg2qq.nix
 
     ./modules/system/i2c.nix
@@ -58,6 +57,7 @@
     ./modules/system/proxy.nix
     ./modules/system/power-profiles-daemon.nix
     ./modules/system/appimage.nix
+    ./modules/system/zswap.nix
 
     ./modules/games
     ./modules/games/gamescope.nix

@@ -18,8 +18,7 @@
   # nixpkgs.overlays = [ inputs.prismlauncher-cracked.overlays.default ];
 
   nixpkgs.overlays = [
-    # extra-cmake-modules top-level alias was removed in nixpkgs 26.05 (Qt5 EOL).
-    # prismlauncher-cracked still references it via callPackage; re-expose it from kdePackages.
+    # 补 nixpkgs 26.05 移除的 extra-cmake-modules 别名
     (final: prev: {
       extra-cmake-modules = final.kdePackages.extra-cmake-modules;
     })
