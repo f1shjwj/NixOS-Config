@@ -116,6 +116,13 @@ window-rule {
     match app-id="steam_proton"
     variable-refresh-rate true
 }
+// Forza Horizon 4：X11 窗口走不到 on-demand VRR，单独强制
+// 同时交给 niri 做全屏，避免 1080p 窗口在可滚动布局里上下跳
+window-rule {
+    match app-id=r#"^steam_app_1293830$"#
+    open-fullscreen true
+    variable-refresh-rate true
+}
 
 binds {
     Mod+Slash   repeat=false { show-hotkey-overlay; }
