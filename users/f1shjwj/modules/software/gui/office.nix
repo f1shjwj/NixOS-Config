@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, username, inputs, ... }:
 {
   users.users.${username}.packages = with pkgs; [
     wpsoffice-cn
@@ -9,6 +9,6 @@
     corefonts
     vista-fonts
     vista-fonts-chs
-    nur.repos.rewine.ttf-wps-fonts
+    inputs.rewine-nur.packages.${pkgs.stdenv.hostPlatform.system}.ttf-wps-fonts
   ];
 }

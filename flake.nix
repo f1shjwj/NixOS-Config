@@ -12,8 +12,9 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
     grub2-themes.url = "github:vinceliuice/grub2-themes";
-    nur = {
-      url = "github:nix-community/NUR";
+    rewine-nur = {
+      # ttf-wps-fonts
+      url = "github:wineee/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xyenon-nur.url = "github:XYenon/nur-packages"; # magpie
@@ -76,7 +77,6 @@
           };
         }
       ];
-      nur-module = [ inputs.nur.modules.nixos.default ];
     in
     {
       nixosConfigurations = {
@@ -85,7 +85,6 @@
           modules =
             nix-settings
             ++ home-manager-module
-            ++ nur-module
             ++ [ ./temp ]
             ++ [ ./hosts/Code01 ]
             ++ [
