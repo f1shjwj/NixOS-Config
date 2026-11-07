@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./magpie.nix
     ./mcp
   ];
 
